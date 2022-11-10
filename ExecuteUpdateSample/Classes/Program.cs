@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.CompilerServices;
 
 // ReSharper disable once CheckNamespace
 namespace ExecuteUpdateSample
@@ -14,7 +9,7 @@ namespace ExecuteUpdateSample
         public static void Init()
         {
             AnsiConsole.MarkupLine("");
-            Console.Title = "Code sample";
+            Console.Title = "Code sample: Execute update";
             WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
         }
     }

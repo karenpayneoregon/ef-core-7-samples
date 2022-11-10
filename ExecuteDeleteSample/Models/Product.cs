@@ -1,6 +1,6 @@
 ﻿namespace ExecuteDeleteSample.Models;
 
-public class Product
+public class Product 
 {
     public int ProductId { get; set; }
 
@@ -9,5 +9,6 @@ public class Product
     public int CategoryId { get; set; }
     public virtual Category Category { get; set; } = null!;
     public override string ToString() => Name;
+
 
 }

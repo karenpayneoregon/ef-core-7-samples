@@ -1,18 +1,20 @@
-﻿using ConfigurationLibrary.Classes;
-using ExecuteDeleteSample.Models;
+﻿using System.Diagnostics;
+using ConfigurationLibrary.Classes;
+using IMaterializationInterceptorSample.Interceptors;
+using IMaterializationInterceptorSample.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Diagnostics;
 
-namespace ExecuteDeleteSample.Data;
+namespace IMaterializationInterceptorSample.Data;
 
 public class ProductsContext : DbContext
 {
-
+    private static readonly SetRetrievedInterceptor _setRetrievedInterceptor = new();
     public DbSet<Product> Products { get; set; }
     public DbSet<Category> Categories { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer(ConfigurationHelper.ConnectionString())
+            .AddInterceptors(_setRetrievedInterceptor)
             .EnableSensitiveDataLogging()
             .LogTo(message => Debug.WriteLine(message));
 

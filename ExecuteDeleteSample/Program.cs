@@ -9,7 +9,7 @@ internal partial class Program
     {
         var table = CreateTableEntityFramework();
         await using var context = new ProductsContext();
-            
+
         await context.Database.EnsureDeletedAsync();
         await context.Database.EnsureCreatedAsync();
 
@@ -22,6 +22,7 @@ internal partial class Program
         await context.Products.Where(p => p.CategoryId == 3).ExecuteDeleteAsync();
         table.AddRow("After ExecuteDeleteAsync", context.Products.AsNoTracking().Count().ToString());
         AnsiConsole.Write(table);
+
         Console.ReadLine();
     }
 }
