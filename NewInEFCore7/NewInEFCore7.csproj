@@ -21,7 +21,13 @@
 		<PackageReference Include="ConsoleHelperLibrary" Version="1.0.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
 		<PackageReference Include="Spectre.Console" Version="0.45.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Data\" />
+	  <Folder Include="Models\" />
 	</ItemGroup>
 
 

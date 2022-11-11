@@ -7,7 +7,7 @@ namespace NewInEFCore7
         static void Main(string[] args)
         {
             AnsiConsole.MarkupLine("[yellow]Hello[/]");
-            JsonColumnsSample.Json_columns_with_TPH();
+            QueryStatisticsLoggerSample.ExecutingCommandsAfterConsumingAResultSet();
             Console.ReadLine();
         }
     }
