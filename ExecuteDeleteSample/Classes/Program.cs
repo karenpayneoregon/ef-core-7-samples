@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.CompilerServices;
 
 // ReSharper disable once CheckNamespace
 namespace ExecuteDeleteSample;
@@ -18,7 +13,13 @@ internal partial class Program
         WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
     }
     #region Screen helpers
-    public static Table CreateTableEntityFramework() => TableExtensions.Title(HasBorderExtensions.BorderColor(AlignableExtensions.Alignment(TableExtensions.AddColumn(TableExtensions.AddColumn(HasTableBorderExtensions.RoundedBorder(new Table()), "[cyan]Event[/]"), "[cyan]Count[/]"), Justify.Center), Color.LightSlateGrey), "[LightGreen]Results[/]");
+    public static Table CreateTableEntityFramework()
+        => new Table().RoundedBorder()
+            .AddColumn("[cyan]Event[/]")
+            .AddColumn("[cyan]Count[/]")
+            .Alignment(Justify.Center)
+            .BorderColor(Color.LightSlateGrey)
+            .Title("[LightGreen]Results[/]");
 
     private static void Render(Rule rule)
     {
@@ -29,7 +30,11 @@ internal partial class Program
     private static void ExitPrompt()
     {
         Console.WriteLine();
-        Render(AlignableExtensions.Centered(RuleExtensions.RuleStyle(new Rule($"[yellow]Press a key to exit the demo[/]"), Style.Parse("silver"))));
+        
+        Render(new Rule("[yellow]Press a key to exit the demo[/]")
+            .RuleStyle(Style.Parse("silver"))
+            .Centered());
+
         Console.ReadLine();
     }
     #endregion

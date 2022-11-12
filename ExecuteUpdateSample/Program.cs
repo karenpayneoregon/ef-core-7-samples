@@ -11,6 +11,7 @@ internal partial class Program
 
         await context.Database.EnsureDeletedAsync();
         await context.Database.EnsureCreatedAsync();
+
         await context.Products
             .Where(p => p.Price > 10)
             .ExecuteUpdateAsync(s => s
