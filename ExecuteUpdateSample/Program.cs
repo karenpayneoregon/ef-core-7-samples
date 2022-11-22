@@ -12,10 +12,13 @@ internal partial class Program
         await context.Database.EnsureDeletedAsync();
         await context.Database.EnsureCreatedAsync();
 
-        await context.Products
+        await context.Products.AsNoTracking()
             .Where(p => p.Price > 10)
             .ExecuteUpdateAsync(s => s
-                .SetProperty(p => p.Name, p => p.Name + " *")
+                .SetProperty(p => p.Name, p =>
+                    p.Name.EndsWith(" *") ? p.Name.Replace(" *", "") : p.Name + " *")
                 .SetProperty(p => p.Price, p => p.Price - 12));
     }
+
+
 }
