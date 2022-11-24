@@ -14,7 +14,8 @@ public class ProductsContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer(ConfigurationHelper.ConnectionString())
             .EnableSensitiveDataLogging()
-            .LogTo(message => Debug.WriteLine(message));
+            .LogTo(message => Debug.WriteLine(message))
+            .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

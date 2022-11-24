@@ -26,6 +26,7 @@ public class ProductsContext : DbContext
             new Category { CategoryId = 3, Name = "Fish" },
             new Category { CategoryId = 4, Name = "Bread" });
 
+        modelBuilder.Entity<Product>().Property<string>("LastUser");
         modelBuilder.Entity<Product>().HasData(
             new Product { ProductId = 1, CategoryId = 1, Name = "Cheddar" },
             new Product { ProductId = 2, CategoryId = 1, Name = "Brie" },

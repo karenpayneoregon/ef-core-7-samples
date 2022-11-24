@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore.Diagnostics;
+﻿using IMaterializationInterceptorSample.Classes;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using IMaterializationInterceptorSample.Interfaces;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace IMaterializationInterceptorSample.Interceptors;
 
@@ -14,6 +16,9 @@ public class SetRetrievedInterceptor : IMaterializationInterceptor
         if (instance is IHasRetrieved hasRetrieved)
         {
             hasRetrieved.Retrieved = DateTime.UtcNow;
+            EntityEntry entry = materializationData.Context.Entry(instance);
+            // shadow property
+            entry.Property("LastUser").CurrentValue = ShadowSettings.UserName;
         }
 
         return instance;

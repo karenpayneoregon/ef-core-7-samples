@@ -15,7 +15,6 @@ internal partial class Program
 
         var list = await context
             .Products
-            .AsNoTracking()
             .ToListAsync();
 
         table.AddRow("Initial count", list.Count.ToString());
