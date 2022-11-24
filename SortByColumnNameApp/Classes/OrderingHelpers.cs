@@ -26,6 +26,11 @@ public enum PropertyAlias
     Title
 }
 
+/// <summary>
+/// Various methods for dynamic ordering
+/// Pick what you like and when doing so consider maintenance as when using Expression for instance
+/// may break in future releases.
+/// </summary>
 public static class OrderingHelpers
 {
     /// <summary>
@@ -35,6 +40,7 @@ public static class OrderingHelpers
     /// <param name="key">key to sort by</param>
     /// <param name="direction">direction to sort by</param>
     /// <returns>query with order by</returns>
+    /// <remarks>Fragile in that if a property name changes this will break</remarks>
     public static IQueryable<Customers> OrderByString(this IQueryable<Customers> query, string key, Direction direction = Direction.Ascending)
     {
         Expression<Func<Customers, object>> exp = key switch
@@ -58,6 +64,7 @@ public static class OrderingHelpers
     /// <param name="key">key to sort by</param>
     /// <param name="direction">direction to sort by</param>
     /// <returns>query with order by</returns>
+    /// <remarks>A little better than <see cref="OrderByString"/> but can still break if the model changes</remarks>
     public static IQueryable<Customers> OrderByEnum(this IQueryable<Customers> query, PropertyAlias key, Direction direction = Direction.Ascending)
     {
         Expression<Func<Customers, object>> exp = key switch
@@ -102,7 +109,9 @@ public static class OrderingHelpers
     /// <param name="list">List of <see cref="T"/></param>
     /// <param name="propertyName">Column/property to order or</param>
     /// <param name="sortDirection">Direction of ordering</param>
-    /// <returns></returns>
+    /// <remarks>
+    /// Intended to be used with methods in EntityExtensions class
+    /// </remarks>
     public static List<T> OrderByPropertyName<T>(this List<T> list, string propertyName, Direction sortDirection)
     {
 
@@ -122,6 +131,13 @@ public static class OrderingHelpers
         return list;
 
     }
+    /// <summary>
+    /// Generic method to sort by one or more columns
+    /// </summary>
+    /// <typeparam name="T">Model</typeparam>
+    /// <param name="query">query</param>
+    /// <param name="propertyNames">property names best obtained from methods in EntityExtensions class</param>
+    /// <param name="sortOrder">ascending or descending</param>
     public static IOrderedQueryable<T> SortColumn<T>(this IQueryable<T> query, string[] propertyNames, Direction sortOrder = Direction.Ascending)
     {
 
