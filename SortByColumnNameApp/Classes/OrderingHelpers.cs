@@ -122,4 +122,44 @@ public static class OrderingHelpers
         return list;
 
     }
+    public static IOrderedQueryable<T> SortColumn<T>(this IQueryable<T> query, string[] propertyNames, Direction sortOrder = Direction.Ascending)
+    {
+
+        if (propertyNames.Length == 0)
+        {
+            throw new InvalidOperationException();
+        }
+
+        var param = Expression.Parameter(typeof(T), string.Empty);
+        var expressionPropField = Expression.PropertyOrField(param, propertyNames[0]);
+
+        var sortExpression = Expression.Lambda(expressionPropField, param);
+
+        MethodCallExpression orderByCall =
+            Expression.Call(typeof(Queryable),
+                "OrderBy" + (sortOrder == Direction.Descending ? "Descending" : string.Empty),
+                new[] { typeof(T), expressionPropField.Type },
+                query.Expression, Expression.Quote(sortExpression));
+
+        if (propertyNames.Length > 1)
+        {
+            for (int index = 1; index < propertyNames.Length; index++)
+            {
+                var item = propertyNames[index];
+                param = Expression.Parameter(typeof(T), string.Empty);
+                expressionPropField = Expression.PropertyOrField(param, item);
+
+                sortExpression = Expression.Lambda(expressionPropField, param);
+
+                orderByCall = Expression.Call(typeof(Queryable),
+                    "ThenBy" + (((sortOrder == Direction.Descending) ? "Descending" : string.Empty)),
+                    new[] { typeof(T), expressionPropField.Type },
+                    orderByCall, Expression.Quote(sortExpression));
+            }
+        }
+
+
+        return (IOrderedQueryable<T>)query.Provider.CreateQuery<T>(orderByCall);
+
+    }
 }

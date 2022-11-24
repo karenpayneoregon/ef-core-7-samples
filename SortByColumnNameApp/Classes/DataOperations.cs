@@ -55,6 +55,7 @@ internal class DataOperations
 
     /// <summary>
     /// Order by using an enum
+    /// See also <see cref="SortCustomerOnCountryName1"/>
     /// </summary>
     public static async Task SortCustomerOnCountryName()
     {
@@ -74,8 +75,29 @@ internal class DataOperations
         }
 
         AnsiConsole.Write(table);
+
     }
 
+    public static async Task SortCustomerOnCountryName1()
+    {
+        await using var context = new NorthWindContext();
+
+        List<Customers> customers = await context.Customers
+            .Include(c => c.CountryNavigation)
+            .SortColumn(new []{"CompanyName"}, Direction.Ascending)
+            .ToListAsync();
+
+
+        var table = CreateTableForCountries();
+
+        for (int index = 0; index < Count; index++)
+        {
+            table.AddRow(customers[index].CompanyName, customers[index].CountryNavigation.Name);
+        }
+
+        AnsiConsole.Write(table);
+
+    }
     /// <summary>
     /// Order by using an enum
     /// </summary>
@@ -96,6 +118,7 @@ internal class DataOperations
         }
 
         AnsiConsole.Write(table);
+
     }
 
     /// <summary>
@@ -122,6 +145,7 @@ internal class DataOperations
         }
 
         AnsiConsole.Write(table);
+
     }
     #region Screen helpers
 
