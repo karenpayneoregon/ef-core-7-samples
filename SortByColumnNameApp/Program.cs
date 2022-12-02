@@ -22,7 +22,7 @@ internal partial class Program
         }
 
 
-        await DataOperations.SortCustomerOnCountryName1();
+        await DataOperations.SortCustomerOnCountryName();
         await DataOperations.SortCustomerOnContactLastName();
         await DataOperations.SortCustomerOnContactTitle();
         DataOperations.ConventionalOrderByOnNavigation();
