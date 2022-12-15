@@ -2,8 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-
-using System.Reflection;
 using EntityFrameworkCoreHelpers.Models;
 
 namespace EntityFrameworkCoreHelpers;
@@ -65,15 +63,19 @@ public static class EntityExtensions
     /// </remarks>
     public static List<SqlColumn> GetModelProperties(this DbContext context, string modelName)
     {
-
-        if (context == null) throw new ArgumentNullException(nameof(context));
+        if (context is null) throw new ArgumentNullException(nameof(context));
 
         var entityType = GetEntityType(context, modelName);
+
+        if (entityType is null)
+        {
+            return Enumerable.Empty<SqlColumn>().ToList();
+        }
 
         var list = new List<SqlColumn>();
 
         IEnumerable<IProperty> properties = context.Model
-            .FindEntityType(entityType ?? throw new InvalidOperationException())!
+            .FindEntityType(entityType)!
             .GetProperties();
 
         foreach (IProperty itemProperty in properties)
@@ -94,6 +96,9 @@ public static class EntityExtensions
         return list;
 
     }
+
+
+
     /// <summary>
     /// Get properties for a model
     /// </summary>
