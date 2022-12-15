@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace EntityFrameworkCoreHelpers;
 public class EntityHelpers
 {
-    public static List<NavigationItem> NavigationInformationForModel<TEntity, TContext>(string connectionString)
+    public static List<NavigationItem> NavigationInformationForModel<TEntity, TContext>()
         where TContext : DbContext
         where TEntity : class,
         IBaseEntity
@@ -13,8 +13,8 @@ public class EntityHelpers
         
         var type = typeof(DbContextOptionsBuilder<>).MakeGenericType(typeof(TContext));
         DbContextOptionsBuilder builder = (DbContextOptionsBuilder)Activator.CreateInstance(type);
-        builder!.UseSqlServer(connectionString);
         var context = (DbContext)Activator.CreateInstance(typeof(TContext), builder.Options);
+        builder!.UseSqlServer(context!.Database.GetConnectionString()!);
         return context!.Model.GetEntityTypes().Where(x => x.ClrType == typeof(TEntity))
             .Select(entityType => new NavigationItem(
                 entityType.ClrType.Name,

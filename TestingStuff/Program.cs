@@ -35,7 +35,7 @@ internal partial class Program
         using var context = new Context();
         var customers = context.Customers.Include(x => x.Contact).ToList();
         var items = EntityHelpers
-            .NavigationInformationForModel<Customers, Context>(context.Database.GetConnectionString());
+            .NavigationInformationForModel<Customers, Context>();
 
         //Console.WriteLine("Customers");
         //var props = context.GetModelProperties(items.FirstOrDefault(x => x.Name == "Customers")!.Name);
