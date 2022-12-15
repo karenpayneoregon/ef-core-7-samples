@@ -33,8 +33,9 @@ internal partial class Program
     private static void Generic1()
     {
         using var context = new Context();
+        var customers = context.Customers.Include(x => x.Contact).ToList();
         var items = EntityHelpers
-            .GetNavigationInformation<Customers, Context>(context.Database.GetConnectionString());
+            .NavigationInformationForModel<Customers, Context>(context.Database.GetConnectionString());
 
         //Console.WriteLine("Customers");
         //var props = context.GetModelProperties(items.FirstOrDefault(x => x.Name == "Customers")!.Name);

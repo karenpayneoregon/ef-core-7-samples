@@ -3,6 +3,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using EntityFrameworkCoreHelpers.Interfaces;
 
 namespace TestingStuff.Models;
@@ -36,15 +37,18 @@ public partial class Customers : IBaseEntity
 
     public int? ContactTypeIdentifier { get; set; }
 
+    [NotMapped]
     public int Id { get => CustomerIdentifier; set {} }
 
+    [NotMapped]
     DateTime IBaseEntity.ModifiedDate
     {
         get => _modifiedDate;
         set => _modifiedDate = value;
     }
-
+    [NotMapped]
     public int ModifiedByUserId { get; set; }
+    [NotMapped]
     public DateTime? ModifiedDate { get; set; }
 
     public virtual Contacts Contact { get; set; }

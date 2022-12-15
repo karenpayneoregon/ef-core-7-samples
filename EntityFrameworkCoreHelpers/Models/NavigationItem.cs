@@ -2,12 +2,12 @@
 
 namespace EntityFrameworkCoreHelpers.Models;
 
-public class Details
+public class NavigationItem
 {
     public string Name { get; }
     public IEnumerable<PropertyInfo> NavigationProperties { get; }
 
-    public Details(string name, IEnumerable<PropertyInfo> navigationProperties)
+    public NavigationItem(string name, IEnumerable<PropertyInfo> navigationProperties)
     {
         Name = name;
         NavigationProperties = navigationProperties;
