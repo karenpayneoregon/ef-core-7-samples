@@ -8,17 +8,53 @@ using TestingStuff.Models;
 
 
 namespace TestingStuff;
-
+/// <summary>
+/// https://stackoverflow.com/a/54968688/5509738
+/// </summary>
 internal partial class Program
 {
     static void Main(string[] args)
     {
         AnsiConsole.MarkupLine("[yellow]Hello[/]");
 
-        Generic1();
+        //var test = EntityHelpers.NavigationsForModelSimple<Customers>();
+        //Generic1();
+
+        using var context = new Context();
+        EntityHelpers.Get<Context>(context.Database.GetConnectionString());
+
         Console.ReadLine();
     }
 
+    private static void Second()
+    {
+        using var context = new Context();
+        //var customers = context.Customers.Include(x => x.Contact).ToList();
+        var items = EntityHelpers.NavigationsForModel<Customers, Context>();
+        if (items is not null)
+        {
+            foreach (var info in items.NavigationProperties)
+            {
+                Console.WriteLine($"{info.Name}");
+            }
+        }
+    }
+
+    private static void First()
+    {
+        using var context = new Context();
+        var modelData = context.Model.GetEntityTypes()
+            .Select(t => new
+            {
+                t.ClrType.Name,
+                NavigationProperties = t.GetNavigations().Select(x => x.PropertyInfo)
+            }).FirstOrDefault(x => x.Name == "Customers");
+
+        foreach (var info in modelData.NavigationProperties)
+        {
+            Console.WriteLine($"{info.Name}");
+        }
+    }
 
 
     private static void NonGeneric1()
@@ -34,8 +70,7 @@ internal partial class Program
     {
         using var context = new Context();
         var customers = context.Customers.Include(x => x.Contact).ToList();
-        var items = EntityHelpers
-            .NavigationInformationForModel<Customers, Context>();
+        var items = EntityHelpers.NavigationInformationForModel<Customers, Context>();
 
         //Console.WriteLine("Customers");
         //var props = context.GetModelProperties(items.FirstOrDefault(x => x.Name == "Customers")!.Name);
