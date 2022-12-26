@@ -2,6 +2,8 @@
 
 Shows how to store data as json in a SQL-Server database table.
 
+Intial code samples for EF Core 7 Json columns are in the EF Core GitHub repository buried which makes it difficult to learn from which is the reason for this project and Json1App project to make learning easy.
+
 Main table
 
 ```csharp

@@ -1,5 +1,11 @@
 ﻿# Json Columns OwnsMany
 
+Intial code samples for EF Core 7 Json columns are in the EF Core GitHub repository buried which makes it difficult to learn from which is the reason for this project and HyBrid.Core project to make learning easy.
+
+**Important**
+
+- The propery `Address` in the `Person` class needs to be nvarchar in the database sized to fix the intended data
+- After reverse engineering, change Address property from string to `List<Address>`
 
 ```csharp
 public partial class Person
