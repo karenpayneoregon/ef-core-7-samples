@@ -1,4 +1,4 @@
-# EF Core 7 code sample
+# EF Core 7 code samples
 
 For various code samples for new features in EF Core 7. Many have been done simplifed as most code samples found on the web are a) incomlete b) too complex for the average developer to learn from.
 
