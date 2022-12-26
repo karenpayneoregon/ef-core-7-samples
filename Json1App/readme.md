@@ -30,22 +30,26 @@ public class Address
 
 </br>
 
-```csharp
-protected override void OnModelCreating(ModelBuilder modelBuilder)
-{
-    modelBuilder.Entity<Person>(entity =>
-    {
-        entity.Property(e => e.DateOfBirth).HasColumnType("datetime");
-        entity.Property(e => e.FirstName).IsRequired();
-        entity.Property(e => e.LastName).IsRequired();
-    });
+![On Model Create](assets/OnModelCreate.png)
 
-    modelBuilder.Entity<Person>().OwnsMany(
-        post => post.Addresses, ownedNavigationBuilder =>
-        {
-            ownedNavigationBuilder.ToJson();
-        });
+Contents for Adddress property.
 
-    OnModelCreatingPartial(modelBuilder);
-}
+```json
+[
+  {
+    "City": "Wyndmoor",
+    "Company": "Company1",
+    "Street": "123 Apple St"
+  },
+  {
+    "City": "Portland",
+    "Company": "Company2",
+    "Street": "999 34th St"
+  }
+]
 ```
+
+# See also
+
+- Microsoft docs [JSON Columns](https://devblogs.microsoft.com/dotnet/announcing-ef7-release-candidate-2/)
+- [EF Core 7 code sample](https://github.com/karenpayneoregon/ef-core-7-samples) (Karen Payne)

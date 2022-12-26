@@ -32,7 +32,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreatePopulate", "CreatePop
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateAndPopulateSqlServerApp", "CreateAndPopulateSqlServerApp\CreateAndPopulateSqlServerApp.csproj", "{0E11D969-DADD-40A3-8BAC-070379EB0DD4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing stuff", "Testing stuff", "{20491D0D-86E2-43B4-A2C1-1B6D75418576}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test projects", "Test projects", "{20491D0D-86E2-43B4-A2C1-1B6D75418576}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingStuff", "TestingStuff\TestingStuff.csproj", "{A054089A-6EDE-48DA-8F01-1D9B7AF03FD2}"
 EndProject
@@ -40,7 +40,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hybrid.Core", "Hybrid.Core\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HybridTestProject", "HybridTestProject\HybridTestProject.csproj", "{6932F950-CC6E-46FA-AFB9-524DF83EC69C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Json1App", "Json1App\Json1App.csproj", "{D4E854CA-DB2E-4733-B11B-2677944E9A9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Json1App", "Json1App\Json1App.csproj", "{D4E854CA-DB2E-4733-B11B-2677944E9A9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

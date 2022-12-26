@@ -1,8 +1,8 @@
 ﻿# About
 
-Shows how to store data as json in a SQL-Server database table.
+Shows how to store data as json in a SQL-Server database table. The idea came from a client who wanted to store all application settings in a single record.
 
-Main table
+**Main table**
 
 ```csharp
 public partial class Applications
@@ -23,3 +23,7 @@ public partial class Applications
     public GeneralSettings GeneralSettings { get; set; }
 }
 ```
+
+Configuration from Hybrid.Core class project's DbContext
+
+![On Model Create](assets/OnModelCreate.png)
