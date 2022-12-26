@@ -22,7 +22,7 @@ namespace TestingStuff.Data.Configurations
             .HasForeignKey(d => d.ContactId)
             .HasConstraintName("FK_ContactDevices_Contacts1");
 
-            entity.HasOne(d => d.PhoneTypeIdentifierNavigation).WithMany(p => p.ContactDevices)
+            entity.HasOne(d => d.PhoneTypeNavigation).WithMany(p => p.ContactDevices)
             .HasForeignKey(d => d.PhoneTypeIdentifier)
             .HasConstraintName("FK_ContactDevices_PhoneType");
 

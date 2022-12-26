@@ -15,9 +15,11 @@ public partial class Contacts
 
     public int? ContactTypeIdentifier { get; set; }
 
+    public string FullName { get; set; }
+
     public virtual ICollection<ContactDevices> ContactDevices { get; } = new List<ContactDevices>();
 
-    public virtual ContactType ContactTypeIdentifierNavigation { get; set; }
+    public virtual ContactType ContactTypeNavigation { get; set; }
 
     public virtual ICollection<Customers> Customers { get; } = new List<Customers>();
 }

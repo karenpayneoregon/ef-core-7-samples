@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 // ReSharper disable once CheckNamespace
-namespace TestingStuff;
+namespace Json1App;
 internal partial class Program
 {
     [ModuleInitializer]
@@ -16,12 +16,4 @@ internal partial class Program
         Console.Title = "Code sample";
         WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
     }
-
 }
-
-public static class TupleExtensions
-{
-    public static string Concatenate(this (string First, string Second) input) => $"{input.First} {input.Second}";
-}
-
-

@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
+using EntityFrameworkCoreHelpers;
 using TestingStuff.Data;
 using TestingStuff.Models;
 
@@ -16,10 +17,17 @@ namespace TestingStuff.Data.Configurations
 
             entity.HasIndex(e => e.ContactTypeIdentifier, "IX_Contacts_ContactTypeIdentifier");
 
-            entity.HasOne(d => d.ContactTypeIdentifierNavigation).WithMany(p => p.Contacts)
+            entity.Property(e => e.FullName).HasComputedColumnSql("(([FirstName]+' ')+[LastName])", false);
+
+            entity.HasOne(d => d.ContactTypeNavigation).WithMany(p => p.Contacts)
             .HasForeignKey(d => d.ContactTypeIdentifier)
             .HasConstraintName("FK_Contacts_ContactType");
 
+            //entity.Navigation(e => e.ContactTypeNavigation).AutoInclude();
+            //entity.Navigation(e => e.ContactDevices).AutoInclude();
+
+
+            
             OnConfigurePartial(entity);
         }
 

@@ -17,5 +17,5 @@ public partial class ContactDevices
 
     public virtual Contacts Contact { get; set; }
 
-    public virtual PhoneType PhoneTypeIdentifierNavigation { get; set; }
+    public virtual PhoneType PhoneTypeNavigation { get; set; }
 }

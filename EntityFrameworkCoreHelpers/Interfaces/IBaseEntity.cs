@@ -8,6 +8,6 @@ namespace EntityFrameworkCoreHelpers.Interfaces;
 public interface IBaseEntity
 {
     int Id { get; set; }
-    DateTime ModifiedDate { get; set; }
-    int ModifiedByUserId { get; set; }
+    //DateTime ModifiedDate { get; set; }
+    //int ModifiedByUserId { get; set; }
 }

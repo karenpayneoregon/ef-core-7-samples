@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="DataScripts\Script1.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="DataScripts\Script1.sql" />
+	</ItemGroup>
+	<ItemGroup>
+		<!-- ReSharper disable once VulnerablePackage -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="ConfigurationLibrary" Version="1.0.1" />
+	</ItemGroup>
+</Project>
+
