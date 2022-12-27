@@ -3,12 +3,16 @@
 For various code samples for new features in EF Core 7. Many have been done simplifed as most code samples found on the web are a) incomlete b) too complex for the average developer to learn from.
 
 ## Popular
-- ExecuteDeleteAsync
-- ExecuteUpdateAsync
-- Json column
+- [ExecuteDeleteAsync](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-7.0/whatsnew#executeupdate-and-executedelete-bulk-updates)
+- [ExecuteUpdateAsync](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-7.0/whatsnew#executeupdate-and-executedelete-bulk-updates)
+    - `ExecuteUpdate` and `ExecuteDelete` can only act on a single table.
+- [Json columns](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-7.0/whatsnew#json-columns)
     - Two projects: Hybrid.Core and Json1App using OwnsOne and OwnsMany
-- IMaterializationInterceptor
-- OwnedEntities
+    - Mapping spatial types directly to JSON is not yet supported. 
+    - Mapping of owned types to JSON is not yet supported in conjunction with TPT or TPC inheritance.
+    - [Queries into JSON columns](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-7.0/whatsnew#queries-into-json-columns)
+- [IMaterializationInterceptor](https://github.com/dotnet/efcore/blob/main/src/EFCore/Diagnostics/IMaterializationInterceptor.cs)
+- [OwnedEntities](https://learn.microsoft.com/en-us/ef/core/modeling/owned-entities)
 
 Documentation for the above is [found here](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-7.0/whatsnew) at Microsoft.
 

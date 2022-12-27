@@ -42,6 +42,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HybridTestProject", "Hybrid
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Json1App", "Json1App\Json1App.csproj", "{D4E854CA-DB2E-4733-B11B-2677944E9A9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslationStringIndexOfApp", "TranslationStringIndexOfApp\TranslationStringIndexOfApp.csproj", "{D60E2F98-0BBA-4D8B-8F41-626EC0F2E3AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,6 +102,10 @@ Global
 		{D4E854CA-DB2E-4733-B11B-2677944E9A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4E854CA-DB2E-4733-B11B-2677944E9A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4E854CA-DB2E-4733-B11B-2677944E9A9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D60E2F98-0BBA-4D8B-8F41-626EC0F2E3AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D60E2F98-0BBA-4D8B-8F41-626EC0F2E3AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D60E2F98-0BBA-4D8B-8F41-626EC0F2E3AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D60E2F98-0BBA-4D8B-8F41-626EC0F2E3AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
