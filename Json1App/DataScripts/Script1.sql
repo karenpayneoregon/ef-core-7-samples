@@ -17,7 +17,7 @@ FROM [EF.Json].dbo.Person;
 
 
 DECLARE @Index AS NCHAR(1) = 1;
-SELECT Id,
+SELECT  Id,
 		FirstName,
 		LastName,
 		DateOfBirth,

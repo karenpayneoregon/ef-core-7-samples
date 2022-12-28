@@ -55,6 +55,12 @@ Contents for Adddress property.
 ]
 ```
 
+# Side note
+
+The code in `DataProviderOperations` shows how to get at the json data using `Microsoft.Data.SqlClient` to a `DataTable`.
+
+![Data Table](assets/DataTable.png)
+
 # See also
 
 - Microsoft docs [JSON Columns](https://devblogs.microsoft.com/dotnet/announcing-ef7-release-candidate-2/)
