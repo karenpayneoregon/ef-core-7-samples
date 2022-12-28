@@ -17,6 +17,10 @@ public class ConnectionHelpers
     {
         optionsBuilder.UseSqlServer(ConfigurationHelper.ConnectionString());
     }
+    public static void NoLoggingSqlServer1(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EF.Json;Trusted_Connection=True");
+    }
     public static void NoLoggingNoTrackingSqlServer(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder

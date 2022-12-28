@@ -11,14 +11,8 @@ namespace Json1App.Data;
 
 public partial class Context : DbContext
 {
-    public Context()
-    {
-    }
-
-    public Context(DbContextOptions<Context> options)
-        : base(options)
-    {
-    }
+    public Context() { }
+    public Context(DbContextOptions<Context> options) : base(options) { }
 
     public virtual DbSet<Person> Person { get; set; }
 
