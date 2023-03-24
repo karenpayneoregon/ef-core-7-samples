@@ -21,7 +21,9 @@ public partial class Context : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer(
             """
-                Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EF.Json;Integrated Security=True
+                Data Source=(localdb)\MSSQLLocalDB;
+                Initial Catalog=EF.Json;
+                Integrated Security=True
                """);
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
