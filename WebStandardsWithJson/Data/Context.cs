@@ -19,7 +19,10 @@ public partial class Context : DbContext
     public virtual DbSet<WebStandards> WebStandards { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EF.Json;Integrated Security=True");
+        => optionsBuilder.UseSqlServer(
+            """
+                Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EF.Json;Integrated Security=True
+               """);
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
