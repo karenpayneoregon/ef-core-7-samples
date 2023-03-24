@@ -1,0 +1,2225 @@
+[
+  {
+    "Section": "1-1-1",
+    "id": "text-equiv-all",
+    "title": "Non-text Content",
+    "description": "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.",
+    "uri": "http://www.w3.org/TR/WCAG20/#text-equiv-all",
+    "conformance_level": "A",
+    "wuhcag_summary": "Provide text alternatives for non-text content",
+    "wuhcag_detail": "\u003Cp\u003E\u003Cstrong\u003EProvide text alternatives for non-text content\u003C/strong\u003E\u003C/p\u003E\n\u003Cp\u003ESome users browse websites with images turned off (as do some users with slow internet connections). These must be true alternatives to the content: they must provide the same information.\u003C/p\u003E\n\u003Ch2\u003EWhat to do\u003C/h2\u003E\n\u003Cul\u003E\n  \u003Cli\u003EAdd a text alternative to all of your images.\u003C/li\u003E\n  \u003Cli\u003EAdd a text alternative to your audio and video (a succinct description of the topic).\u003C/li\u003E\n  \u003Cli\u003EAdd a name to all of your controls (such as \u2018Search\u2019 or \u2018Submit\u2019).\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EThere are a few types of image that don\u2019t need alt text: spacers, icons, purely decorative, tests and CAPTCHA images.\u003C/p\u003E\n\u003Cp\u003EIcons are usually used to complement text, rather than replace it, so there\u2019s no need to duplicate your efforts here. Customers with screen readers would just hear the same thing twice anyway, which is the opposite of what we\u2019re trying to do.\u003C/p\u003E\n\u003Cp\u003ESpacers are images used for padding, often for ease and not good coding. They are often used to preserve formatting and present no information, so they don\u2019t need alt text.\u003C/p\u003E\n\u003Cp\u003ETests and CAPTCHAs that would be undermined by text alternatives don\u2019t need them. Although if you do use CAPTCHA, use one with an audio alternative or add your contact details somewhere close by to help your users if they get stuck.\u003C/p\u003E\n\u003Cp\u003EIn all these cases, use \u2018null\u2019 alt text by simply leaving the alt text out, but do put the quotes in:\u003C/p\u003E\n\u003Cpre class=\u0022brush: html; auto-links: false;\u0022\u003E\u0026lt;img src=\u0026quot;location-of-image.jpg\u0026quot; alt=\u0026quot;\u0026quot; /\u0026gt;\u003C/pre\u003E\n\u003Cp\u003EScreen readers will then skip the image rather than reading the filename or trying to substitute an alt text.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "",
+    "wuhcag_exceptions": "",
+    "wuhcag_related": [
+      {
+        "Section": "1-4-5",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "1-4-9",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-4-5\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00221-4-9\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-2-1",
+    "id": "media-equiv-av-only-alt",
+    "title": "Audio-only and Video-only (Prerecorded)",
+    "description": "For prerecorded audio-only and prerecorded video-only media, the following are true, except when the audio or video is a media alternative for text and is clearly labeled as such:",
+    "uri": "http://www.w3.org/TR/WCAG20/#media-equiv-av-only-alt",
+    "conformance_level": "A",
+    "wuhcag_summary": "Provide an alternative to video-only and audio-only content",
+    "wuhcag_detail": "\u003Cp\u003E\u003Cstrong\u003EProvide an alternative to video-only and audio-only content\u003C/strong\u003E\u003C/p\u003E\n\u003Cp\u003ESome users will find it difficult to use or understand things like podcasts and silent videos or animations.\u003C/p\u003E\n\u003Ch2\u003EWhat to do\u003C/h2\u003E\n\u003Cul\u003E\n  \u003Cli\u003EWrite text transcripts for any audio-only media;\u003C/li\u003E\n  \u003Cli\u003EWrite text transcripts for any video-only media; or\u003C/li\u003E\n  \u003Cli\u003ERecord an audio-track for any video-only media;\u003C/li\u003E\n  \u003Cli\u003EPlace the text transcript, or link to it, close to the media.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EAudio-only and video-only content needs to be supported by text transcripts that convey the same information as the media. Sometimes this is quite simple, other times you have to make a judgement call on what that really means. The best bet is, as always,to be honest with your customers: what does the media convey and does your transcript do the same? Could you swap one for the other?\u003C/p\u003E\n\u003Cp\u003EOne of the most common uses for text transcripts is when a podcast is published online. Embedding a podcast in a page is a great way of sharing your content but no good for your customers with hearing impairments. A text transcript should contain everything mentioned in the recording.\u003C/p\u003E\n\u003Cp\u003ELess commonly, some videos do not have sound. Your customers with visual impairments need help with this kind of content. A text transcript for a video without sound should describe what is going on in the video as clearly as possible. Try to focus on\n  what the video is trying to say rather than getting bogged down with detail.\u003C/p\u003E\n\u003Cdiv class=\u0027mailmunch-forms-in-post-middle\u0027 style=\u0027display: none !important;\u0027\u003E\u003C/div\u003E\n\u003Cp\u003EAs an alternative for video-only content, you could also choose to record an audio track that narrates the video.\u003C/p\u003E\n\u003Cp\u003EFor both audio-only and video-only, create your text transcript and place it either directly beneath the content or insert a link next to the content.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "",
+    "wuhcag_exceptions": "\u003Cp\u003EIf the content is itself an alternative (you don\u2019t have to provide a transcript of the audio track you provided to explain the silent video you used).\u003C/p\u003E\n",
+    "wuhcag_related": [
+      {
+        "Section": "1-2-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-2-3",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-2-5",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "1-2-7",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "1-2-8",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-2-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-2-3\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-2-5\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00221-2-7\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00221-2-8\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-2-2",
+    "id": "media-equiv-captions",
+    "title": "Captions (Pre-recorded)",
+    "description": "Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such.",
+    "uri": "http://www.w3.org/TR/WCAG20/#media-equiv-captions",
+    "conformance_level": "A",
+    "wuhcag_summary": "Provide captions for videos with audio",
+    "wuhcag_detail": "\u003Cp\u003EClosed captioning is perhaps the most well known tool for people with disabilities. Often known as subtitles, or abbreviated as CC, closed captions have been around since the 1970s.\u003C/p\u003E\n\u003Cp\u003EMultimedia is becoming more and more popular as the average home gets faster and faster internet access. Videos are cropping up everywhere, from news websites to product pages. One of the most visited websites in the world, YouTube, is specifically for online videos. As website owners turn to video, you must think of how users process your multimedia content.\u003C/p\u003E\n",
+    "wuhcag_tips": "",
+    "wuhcag_what_to_do": "\u003Cp\u003EAdding captions to a video is a relatively hard task, compared to something like writing a text transcript or providing alternative text. Captions must be synchronised with the video to be useful, which means marking up the plain text with timestamps.\u003C/p\u003E\n\u003Cp\u003EThere are plenty of paid services out there that will do your closed captioning for you, often at reasonable rates. There are also many free programs that will attempt to create your caption file for you, but none as good as human eyes and ears just yet. Like with many areas of web accessibility, your choice is between spending time (writing your own captions) or money (outsourcing).\u003C/p\u003E\n\u003Cp\u003EGoogle has written a very clear how-to guide on adding captions to YouTube videos, which I\u2019m not going to try and better.\u003C/p\u003E\n\u003Cp\u003EAdd captions to all videos with sound.\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-1-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-2-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-2-4",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-2-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-2-4\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-2-3",
+    "id": "media-equiv-audio-desc",
+    "title": "Audio Description or Media Alternative (Prerecorded)",
+    "description": "An alternative for time-based media or audio description of the prerecorded video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labeled as such.",
+    "uri": "http://www.w3.org/TR/WCAG20/#media-equiv-audio-desc",
+    "conformance_level": "A",
+    "wuhcag_summary": "Video with audio has a second alternative",
+    "wuhcag_detail": "\u003Cp\u003EAn audio description is an edited version of a video\u2019s soundtrack that adds more information than the regular soundtrack offers. This might mean narrating movements that are not audibly explained in the video, or adding context to visual information.\u003C/p\u003E\n\u003Cp\u003EThe need for audio description isn\u2019t always clear to website owners, yet it is among the most used accessibility feature in the real world. Many cinemas have audio described screenings, where film fans can use earphones that offer a different soundtrack to the regular feature. That soundtrack will be the regular one supplemented with extra information intended to help film lovers with visual impairments.\u003C/p\u003E\n\u003Cp\u003ETo meet this guideline, it\u2019s easier to provide users with a text transcript instead of audio description. However, the either/or option only covers Level A. To reach Level AA you would need to offer audio description. For Level AAA you need both audio description and text transcript.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EA full text transcript is a document that includes all information present in the audio or video source. This means including any visual cues (for example, \u2018The fisherman holds up a large bass.\u2019) as well as dialogue attribution and description.\u003C/p\u003E\n\u003Cp\u003EProviding audio description at this stage will fulfil Guideline 1.2.5 at Level AA but you will need both audio description and a transcript for Guideline 1.2.8 at Level AAA.\u003C/p\u003E\n\u003Cp\u003EIf you\u2019re going to the length of audio description for this guideline, you can also satisfy Guideline 1.2.5 and Guideline 1.2.7 by recording extended audio description tracks wherever necessary.\u003C/p\u003E\n\u003Cp\u003ESomething like a straight face-to-face interview, or a speech-to-camera would probably not need audio description. If your video conveys all its information through sound, an audio description track is not needed. If you have this in your mind when you create videos, you can easily sidestep what could be a lengthy process.\u003C/p\u003E\n\u003Cp\u003EIf you do need to add audio description, there are a number of options available to you. You can pay a firm to narrate an alternative soundtrack for you, or you can do it yourself. As usual, it\u2019s a case of balancing your resources of time and money.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n\t\u003Cli\u003EProvide a full text transcript of the video; or\u003C/li\u003E\n\t\u003Cli\u003EProvide a version of the video with audio description .\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-1-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-2-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-2-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-2-5",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "1-2-7",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "1-2-8",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-2-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-2-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-2-5\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00221-2-7\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00221-2-8\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-2-4",
+    "id": "media-equiv-real-time-captions",
+    "title": "Captions (Live)",
+    "description": "Captions are provided for all live audio content in synchronized media.",
+    "uri": "http://www.w3.org/TR/WCAG20/#media-equiv-real-time-captions",
+    "conformance_level": "AA",
+    "wuhcag_summary": "Video with audio has a second alternative",
+    "wuhcag_detail": "\u003Cp\u003EYour users sometimes rely on captions to enjoy your video content. Adding captions to live videos helps people use your website when you\u2019re streaming live video.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003ELive video is mainly used by large broadcasting companies, but you might want to provide a live stream of a seminar for people who can\u2019t physically attend, or perhaps you\u2019re working for a University and need to put graduation ceremonies online.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EUse a content management system that allows captions to be added live and probably a professional subtitler to do it for you.\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-2-2",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-2-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-2-5",
+    "id": "media-equiv-audio-desc-only",
+    "title": "Audio Description (Prerecorded)",
+    "description": "Audio description is provided for all prerecorded video content in synchronized media.",
+    "uri": "http://www.w3.org/TR/WCAG20/#media-equiv-audio-desc-only",
+    "conformance_level": "AA",
+    "wuhcag_summary": "Users have access to audio description for video content",
+    "wuhcag_detail": "\u003Cp\u003ESome of your users will rely on audio description to help with videos. Adding audio description to your videos means these users have the same information as everyone else.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EIf you have provided audio description for videos to meet Guideline 1.2.3, you have already fulfilled this guideline.\u003C/p\u003E\n\u003Cp\u003EYour audio description version must include everything that might be lost to a visually impaired user \u2013 things like:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003ERelevant exposition (location, gestures, lighting, colours).\u003C/li\u003E\n \u003Cli\u003EIdentifying new speakers.\u003C/li\u003E\n \u003Cli\u003EMarking the passing of time.\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp\u003EThis is by no means an exhaustive list. The key is to think about what information the video provides and ensure a user with a visual impairment gets the same information.\u003C/p\u003E\n\u003Cp\u003ERemember to use clear words, use the present tense and keep in sync with the video.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EMake an alternative version of your video with an audio description soundtrack and link to it from near the original content.\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-2-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-2-3",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-2-7",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "1-2-8",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-2-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-2-3\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-2-7\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00221-2-8\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-2-6",
+    "id": "media-equiv-sign",
+    "title": "Sign Language (Prerecorded)",
+    "description": "Sign language interpretation is provided for all prerecorded audio content in synchronized media.",
+    "uri": "http://www.w3.org/TR/WCAG20/#media-equiv-sign",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Provide sign language translations for videos",
+    "wuhcag_detail": "\u003Cp\u003ESome of your users will want to view sign language interpretations of your videos. Adding this feature offers those users the same information as others.\u003C/p\u003E\n",
+    "wuhcag_tips": "",
+    "wuhcag_what_to_do": "\u003Cp\u003EMake an alternative version of your video with a sign language interpreter embedded and link to it from near the original content.\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-1-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-2-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-2-3",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-2-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-2-3\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-2-7",
+    "id": "media-equiv-extended-ad",
+    "title": "Extended Audio Description (Prerecorded)",
+    "description": "Where pauses in foreground audio are insufficient to allow audio descriptions to convey the sense of the video, extended audio description is provided for all prerecorded video content in synchronized media.",
+    "uri": "http://www.w3.org/TR/WCAG20/#media-equiv-extended-ad",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Provide extended audio description for videos",
+    "wuhcag_detail": "\u003Cp\u003EYour users who value audio description need to receive the same information that other users get from your video. Extended audio description can help where your video conveys large amounts of information without enough pauses in the regular soundtrack for audio description to work. Extended audio description is simply pausing the video to give a narrator enough time to convey the information in the video.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n\t\u003Cli\u003EHire a video editor to get the timings right and synchronise the audio and video.\u003C/li\u003E\n\t\u003Cli\u003EIf you chose to use audio description to fulfil Guideline 1.2.3, you may have already satisfied this guideline.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EMake an alternative version of your video with an extended audio description soundtrack and link to it from near the original content.\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-2-3",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-2-5",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "1-2-8",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-2-3\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-2-5\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00221-2-8\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-2-8",
+    "id": "media-equiv-text-doc",
+    "title": "Media Alternative (Prerecorded)",
+    "description": "An alternative for time-based media is provided for all prerecorded synchronized media and for all prerecorded video-only media.",
+    "uri": "http://www.w3.org/TR/WCAG20/#media-equiv-text-doc",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Provide a text alternative to your videos",
+    "wuhcag_detail": "\u003Cp\u003EWhile you may have produced captions or audio description to enhance your videos, some users will rely on a text alternative to get the information. Providing a full text transcript of a video, including links to any calls to action, can help make it more accessible.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EYou may have fulfilled this Guideline if you chose to meet Guideline 1.2.3 with a text transcript and then fulfilled Guideline 1.2.5 with audio description.\u003C/li\u003E\n \u003Cli\u003EA good transcript contains all information in the video, such as visual cues, description and dialogue attribution.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EProvide a full text transcript for your video and link to it from near the original content.\u003C/li\u003E\n \u003Cli\u003EIf the video needs audio description, make sure that is also in place.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-2-3",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-2-5",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "1-2-7",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-2-3\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-2-5\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00221-2-7\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-2-9",
+    "id": "media-equiv-live-audio-only",
+    "title": "Audio-only (Live)",
+    "description": "An alternative for time-based media that presents equivalent information for live audio-only content is provided.",
+    "uri": "http://www.w3.org/TR/WCAG20/#media-equiv-live-audio-only",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Provide alternatives for live audio",
+    "wuhcag_detail": "\u003Cp\u003EWhen broadcasting live audio-only content, such as a live podcast or radio stream, some users will rely on an alternative to the audio to understand your content.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n  \u003Cli\u003ETo add live captions to an audio broadcast you will need professional software.\u003C/li\u003E\n  \u003Cli\u003EYou may also want to hire a professional subtitler to get the best results.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EAdd closed captions to live audio; or\u003C/li\u003E\n \u003Cli\u003EIf the live broadcast is from a prepared script, make the script text available from near the original content.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-2-4",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-2-4\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-3-1",
+    "id": "content-structure-separation-programmatic",
+    "title": "Info and Relationships",
+    "description": "Information, structure,  and relationships conveyed through presentation can be programmatically determined or are available in text.",
+    "uri": "http://www.w3.org/TR/WCAG20/#content-structure-separation-programmatic",
+    "conformance_level": "A",
+    "wuhcag_summary": "Structure your website logically",
+    "wuhcag_detail": "\u003Cp\u003EAll users benefit when your web page structure is logical. Many of us take things like headings, bullet points, bolding and italics for granted. For your users with disabilities, those elements can make the difference between understanding a website and leaving it. Many forms of assistive technology rely on correct formatting to work correctly, meaning a heading can go a long way for your users.\u003C/p\u003E\n\u003Cp\u003EBecause we use formatting elements so often, we can forget how to use them properly. Going back to basics is a great way to improve your content with relatively little effort.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EEnsuring that your web pages have an accessible structure is at once a simple and complex task. The level of difficulty depends on the complexity of your website; a page with several levels of headings will take more work than a single-topic blog post.\u003C/p\u003E\n\u003Cp\u003EAn efficient way to check your markup is to use a HTML validator. This will tell you if the web page structure has any HTML errors \u2013 these errors won\u2019t always equate to accessibility flaws but the cleaner your code the better. Errors like improperly closed paragraph tags are easily remedied.\u003C/p\u003E\n\u003Cp\u003EAfter using the validator, check pages manually for correctly nested headings and other more visible page elements. Manually check that any forms you use are labelled clearly too, simple things like required field asterisks that lack explanation can cause big problems.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EComplying with the need for good web page structure and formatting is a wide-ranging target. Half-measures don\u0027t work, so you can\u2019t use subheadings properly and then throw random bullet points all over the place.\u003C/p\u003E\n\u003Cp\u003EAmongst other things, you must:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EBreak up content with subheadings for new sections. \u003C/li\u003E\n \u003Cli\u003EMark those headings with HTML header tags. \u003C/li\u003E\n \u003Cli\u003EUse the correct HTML for all structural elements. \u003C/li\u003E\n \u003Cli\u003EUse valid HTML everywhere else. \u003C/li\u003E\n \u003Cli\u003EUse clear labels on forms.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-3-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-3",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-6",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "2-4-10",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "4-1-1",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-3-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-3\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-6\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00222-4-10\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00224-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-3-2",
+    "id": "content-structure-separation-sequence",
+    "title": "Meaningful Sequence",
+    "description": "When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined.",
+    "uri": "http://www.w3.org/TR/WCAG20/#content-structure-separation-sequence",
+    "conformance_level": "A",
+    "wuhcag_summary": "Present your website content in a meaningful order",
+    "wuhcag_detail": "\u003Cp\u003EThe meaning of content on your website relies on the order you present it. For example, in English we read from left to right and read a left-hand column before a right-hand column. Present the content on your website in an order that your users can understand.\u003C/p\u003E\n\u003Cp\u003ESome of your users rely on assistive technology (like a screen reader) to interpret content. By sequencing content correctly, you can make sure that your users with disabilities can understand your website and improve your overall web accessibility.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EInvest in some assistive technology and use it to browse your website. \u003Ca href=\u0022http://www.nvaccess.org/\u0022\u003ENVDA is a free screen reader\u003C/a\u003E you can try to get started.\u003C/p\u003E\n\u003Cp\u003ETurn off the site\u2019s Cascading Style Sheet (CSS) and check that your web page displays in the correct order. You can use an extension like \u003Ca href=\u0022http://www.chromeextensions.org/webmaster-seo/pendule/\u0022\u003EPendule for Chrome\u003C/a\u003E to easily toggle CSS on and off.\u003C/p\u003E\n\u003Cp\u003EUsing headings to show importance isn\u2019t always straightforward. Headings on a web page are a great way to break up content and show your users the relative importance of each section. Headings in HTML range from 1 (the most important) to 6 (the least important). It\u2019s best to have just one Heading1 (H1) on a web page, to show the title of that page.\u003C/p\u003E\n\u003Cp\u003EHowever, headings don\u2019t need to descend from 1 to 6 each time you use one. As well as headings that share levels, you can skip levels altogether if that fits your content.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EEnsuring you present your content in a meaningful sequence is a wide-ranging part of web accessibility. It applies to all elements of all pages, so is as big or as small a task as your website.\u003C/p\u003E\n\u003Cp\u003EMake sure you:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EPresent content in a meaningful order.\u003C/li\u003E\n \u003Cli\u003ESeparate navigation menus from content.\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp\u003EAlways present your content so that it preserves your meaning. That way, it\u2019s great for anyone reading it. The main things to look out for are:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EUse paragraphs in order.\u003C/li\u003E\n \u003Cli\u003EUse headings to show importance.\u003C/li\u003E\n \u003Cli\u003EChoose whether a list needs numbering or not.\u003C/li\u003E\n \u003Cli\u003EUse valid HTML and check it with the W3C\u2019s markup validator.15\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-3-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-3",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-6",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-3-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-3\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-6\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-3-3",
+    "id": "content-structure-separation-understanding",
+    "title": "Sensory Characteristics",
+    "description": "Instructions provided for understanding\nand operating content do not rely solely on sensory characteristics of components such as shape, size, visual location, orientation, or sound.",
+    "uri": "http://www.w3.org/TR/WCAG20/#content-structure-separation-understanding",
+    "conformance_level": "A",
+    "wuhcag_summary": "Use more than one sense for instructions",
+    "wuhcag_detail": "\u003Cp\u003ESensory characteristics is an important but ridiculous-sounding phrase in web accessibility. It\u2019s actually far less complicated than it sounds. The sensory characteristics of your website are things like shape, sound, position and size.\u003C/p\u003E\n\u003Cp\u003EYou\u0027ll often come across sensory characteristics in instructions to your users. Saying things like \u2018Use the search bar on the right\u2019 isn\u2019t helpful to a user who doesn\u2019t understand what right is. The main solution is to use more than one indicator for instructions.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003ECreating accessible instructions is great for everyone. The clearer your instructions are, the more likely users will follow them \u2013 this is especially useful for things like buying instructions. Getting this guideline right might just make you more money or get you more users by reducing dropouts.\u003C/p\u003E\n\u003Cp\u003EA good instruction will use several sensory characteristics. Consider the accessibility of these four examples:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003E\u2018Use the search box\u2019\u003C/li\u003E\n \u003Cli\u003E\u2018Use the search box on the right\u2019\u003C/li\u003E\n \u003Cli\u003E\u2018Search by using the green rectangle box labelled \u2018Search\u2019 on the right\u2019\u003C/li\u003E\n \u003Cli\u003E\u2018Search by using the rectangle box at the very top right of this page\u2019\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp\u003EWeb designers often have an aversion to adding words, feeling that it adds to confusion. In this case, the opposite can be true. Of course, ideally you want a website that feels instinctive with clear actions. When you need instructions, get them right.\u003C/p\u003E\n\u003Cp\u003EIt\u2019s best to avoid sound on a website, other than in media. No one likes unexpected sounds. It\u2019s always hard to tell what the sound means and what you did do make it happen. A prime example is if you use sounds to alert users to errors on a form. The user can\u0027t tell exactly what made the error, they won\u0027t even be sure the sound indicated an error. Your users with hearing impairments have no chance.\u003C/p\u003E\n\u003Cp\u003EFor forms, use a clear visual clue for errors and avoid sounds altogether.\u003C/p\u003E\n\u003Cp\u003EBy making sure you don\u2019t rely only on colour in your instructions, you can work towards Guideline 1.4.1.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EGetting sensory characteristics right is mainly a case of using your common sense. There are no technical requirements, just good and sensible copy writing:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EUse more than one sense for instructions.\u003C/li\u003E\n \u003Cli\u003EAvoid instructions that rely on sound.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-4-1",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-4-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-4-1",
+    "id": "visual-audio-contrast-without-color",
+    "title": "Use of Color",
+    "description": "Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.",
+    "uri": "http://www.w3.org/TR/WCAG20/#visual-audio-contrast-without-color",
+    "conformance_level": "A",
+    "wuhcag_summary": "Don\u2019t use presentation that relies solely on colour",
+    "wuhcag_detail": "\u003Cp\u003EYour users with visual impairment need help when you use colour on your website. As many as \u003Ca href=\u0022http://www.colourblindawareness.org/colour-blindness\u0022\u003E1 in 12 men have some degree of colour blindness\u003C/a\u003E. That means that somewhere around 8% of your male users will struggle with your website if you don\u2019t use colour correctly.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003ECheck for colour issues by printing samples from your website in black and white. Are there any instructions you can\u2019t follow or is there information you can\u2019t understand?\u003C/p\u003E\n\u003Cp\u003EMaking your website accessible to colour blind users is simple. The main area to focus on is giving instructions. Saying things like \u2018Click the green button\u2019 or \u2018Required fields are red\u2019 is useless to users who can\u2019t see green or red. Back these kinds of instructions up with at least one more identifying remark.\u003C/p\u003E\n\u003Cp\u003EAnother point is to make sure that important graphics are not dependent on colour alone. For example, your users might not understand a pie chart where only colour separates the segments. In this case, you should add clear labelling and patterns to the segments.\u003C/p\u003E\n\u003Cp\u003EThere\u2019s an overlap here with Guideline 1.3.3. Instructions should always be clear and give your customers the detail they need.\u003C/p\u003E\n\u003Cp\u003EThis guideline is not about removing all traces of colour from your website, far from it. It just means that colour must not be the only way of conveying the information or instruction. A common misconception is that web accessibility means making your website black and white, and making it completely boring. Web accessibility is about improving websites, not taking away from them.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EUsing colour is mainly a case of using your common sense:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EInstructions must not rely on colour alone.\u003C/li\u003E\n \u003Cli\u003EOther information (like charts and graphs) must not rely on colour alone.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      "1-4-1"
+    ],
+    "RelatedList": []
+  },
+  {
+    "Section": "1-4-2",
+    "id": "visual-audio-contrast-dis-audio",
+    "title": "Audio Control",
+    "description": "If any audio on a Web page plays automatically for more than 3 seconds, either a mechanism is available to pause or stop the audio, or a mechanism is available to control audio volume independently from the overall system volume level.",
+    "uri": "http://www.w3.org/TR/WCAG20/#visual-audio-contrast-dis-audio",
+    "conformance_level": "A",
+    "wuhcag_summary": "Don\u2019t play audio automatically",
+    "wuhcag_detail": "\u003Cp\u003EAutomatically playing sounds doesn\u0027t help your users. Your users don\u0027t need audio distractions when visiting your website. You have a hard enough time getting them to do what you want. Some of your users will have problems focusing and unexpected sounds can distract them further.\u003C/p\u003E\n",
+    "wuhcag_tips": "",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n  \u003Cli\u003EDon\u2019t have any audio that plays automatically.\u003C/li\u003E\n  \u003Cli\u003EHave all the audio you want, just let your users choose when they want to hear it.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": null,
+    "RelatedList": []
+  },
+  {
+    "Section": "1-4-3",
+    "id": "visual-audio-contrast-contrast",
+    "title": "Contrast (Minimum)",
+    "description": "The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:",
+    "uri": "http://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast",
+    "conformance_level": "AA",
+    "wuhcag_summary": "Contrast ratio between your text and background is at least 4.5:1",
+    "wuhcag_detail": "\u003Cp\u003EAll of your users will benefit from a good contrast between the text on your website and the background colour. Some of your users with visual impairments need a stronger contrast than others, so getting your colours right is essential.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n  \u003Cli\u003EPicking a contrast of at least 7:1 will also fulfil Guideline 1.4.6.\u003C/li\u003E\n  \u003Cli\u003ERemember to ensure that all colours used conform. This includes links that change colour after being used once, and headings in menus and sidebars, as well as main content.\u003C/li\u003E\n  \u003Cli\u003EMake sure that any embedded charts or images of charts have the minimum contrast between elements (for example, bars, axes and labels).\u003C/li\u003E\n  \u003Cli\u003EThis guideline also applies to images of text (but you shouldn\u2019t be using images of text, see Guideline 1.4.5.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EMake sure the contrast ratio between your text and background is at least 4.5:1.\u003C/p\u003E\n\u003Cp\u003EDo this by:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EUsing a light background and dark text; or\u003C/li\u003E\n \u003Cli\u003EUsing a dark background and light text; and\u003C/li\u003E\n \u003Cli\u003EUsing \u003Ca href=\u0022http://webaim.org/resources/contrastchecker/\u0022\u003EWebAim\u2019s colour contrast checker\u003C/a\u003E to verify your choice.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-4-5",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "1-4-6",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "1-4-9",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-4-5\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00221-4-6\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00221-4-9\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-4-4",
+    "id": "visual-audio-contrast-scale",
+    "title": "Resize text",
+    "description": "Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.",
+    "uri": "http://www.w3.org/TR/WCAG20/#visual-audio-contrast-scale",
+    "conformance_level": "AA",
+    "wuhcag_summary": "Text can be resized to 200% without loss of content or function",
+    "wuhcag_detail": "\u003Cp\u003ESome of your users with visual impairments will need to resize text in order to understand it fully. You should allow for up to a 200% resize of text without dropping any content or functions.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EResizing text is different to zooming (which enlarges text, images and layout without preserving formatting).\u003C/li\u003E\n \u003Cli\u003ECheck your website by resizing to 200% in a variety of browsers.\u003C/li\u003E\n \u003Cli\u003EMake sure your resized text doesn\u2019t require the user to scroll horizontally and you fulfil part of Guideline 1.4.8.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-4-5",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "1-4-8",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "1-4-9",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-4-5\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00221-4-8\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00221-4-9\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-4-5",
+    "id": "visual-audio-contrast-text-presentation",
+    "title": "Images of Text",
+    "description": "If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except.",
+    "uri": "http://www.w3.org/TR/WCAG20/#visual-audio-contrast-text-presentation",
+    "conformance_level": "AA",
+    "wuhcag_summary": "Don\u0027t use images of text",
+    "wuhcag_detail": "\u003Cp\u003ESome of your users will visit your website using a text-only browser, or might have images turned off in a regular browser. Images of text cause problems, as they are harder for those users to understand.\u003C/p\u003E\n\u003Cp\u003EImages of text also cause problems for your users if they like to resize websites to read them more clearly because images do not work well this way. They also add to the time it takes your website to load, another key reason users will leave your website.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EImages of text are subject to guidelines on color contrast. See Guideline 1.4.3 and Guideline 1.4.6.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EDo not use an image of text when you can use plain text.\u003C/li\u003E\n \u003Cli\u003EDisplay quotes as text rather than images.\u003C/li\u003E\n \u003Cli\u003EUse CSS to style headings.\u003C/li\u003E\n \u003Cli\u003EUse CSS to style navigation menus as text.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-1-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-4-3",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "1-4-6",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "1-4-9",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-4-3\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00221-4-6\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00221-4-9\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-4-6",
+    "id": "visual-audio-contrast7",
+    "title": "Contrast (Enhanced)",
+    "description": "The visual presentation of text and images of text has a contrast ratio of at least 7:1, except for the following:",
+    "uri": "http://www.w3.org/TR/WCAG20/#visual-audio-contrast7",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Contrast ratio between your text and background is at least 7:1",
+    "wuhcag_detail": "\u003Cp\u003EAll of your users will benefit from a good contrast between the text on your website and the background colour. Some of your users with visual impairments need a stronger contrast than others, so getting your colours right is essential.\u003C/p\u003E\n\u003Cp\u003EWhile the minimum contrast for Level AA was 4.5:1, for Level AAA it\u2019s 7:1. This higher level of contrast makes it even easier for everyone to read your content.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EYou may have fulfilled this guideline when you complied with Guideline 1.4.3.\u003C/li\u003E\n \u003Cli\u003ERemember to ensure that all colours used conform. This includes links that change colour after being used once, and headings in menus and sidebars, as well as main content.\u003C/li\u003E\n \u003Cli\u003EMake sure that any embedded charts or images of charts have the minimum contrast between elements (for example, bars, axes and labels).\u003C/li\u003E\n \u003Cli\u003EThis guideline also applies to images of text (but you shouldn\u0027t be using images of text \u2013 see Guideline 1.4.5).\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EMake sure the contrast ratio between your text and background is at least 7:1.\u003C/p\u003E\n\u003Cp\u003EDo this by:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EUsing a light background and dark text; or\u003C/li\u003E\n \u003Cli\u003EUsing a dark background and light text; and\u003C/li\u003E\n \u003Cli\u003EUsing a colour contrast checker to verify your choice.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-4-3",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-4-3\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-4-7",
+    "id": "visual-audio-contrast-noaudio",
+    "title": "Low or No Background Audio",
+    "description": "For prerecorded audio-only content that (1) contains primarily speech in the foreground, (2) is not an audio CAPTCHA or audio logo, and (3) is not vocalization intended to be primarily musical expression such as singing or rapping, at least one of the following is true:",
+    "uri": "http://www.w3.org/TR/WCAG20/#visual-audio-contrast-noaudio",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Your audio is clear for listeners to hear",
+    "wuhcag_detail": "\u003Cp\u003ESome of your users will have difficulties with their hearing. They will not be able to hear your audio content as clearly as other users. You can help by ensuring that all of your audio is clear.\u003C/p\u003E\n\u003Cp\u003EIf you have pre-recorded audio-only content, keep background noise to a minimum so that the speaking voices can be heard.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003ERecord your audio in a place you know will be quiet (a room with lots of soft furnishings is best if you haven\u2019t got a studio).\u003C/li\u003E\n \u003Cli\u003EEmbed good quality audio (you should be doing this anyway if you care about your website).\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EMake sure your pre-recorded audio does not contain any background noise; or\u003C/li\u003E\n \u003Cli\u003EIf there has to be some background noise, it is generally 20 decibels lower than the foreground noise. That\u2019s about four times quieter.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": null,
+    "RelatedList": []
+  },
+  {
+    "Section": "1-4-8",
+    "id": "visual-audio-contrast-visual-presentation",
+    "title": "Visual Presentation",
+    "description": "For the visual presentation of blocks of text, a mechanism is available to achieve the following:",
+    "uri": "http://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Offer users a range of presentation options",
+    "wuhcag_detail": "\u003Cp\u003ESome of your users will have difficulty viewing your website with the same clarity as others. There\u0027s no way you can guess every combination of colours and sizes your users prefer, but you can offer ways for them to customise their view.\u003C/p\u003E\n\u003Cp\u003EAllowing your users to select from a range of visual presentation options will help them to get the best from your website.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EThe \u003Ca href=\u0022http://www.w3.org/TR/2010/NOTE-WCAG20-TECHS-20101014/working-examples/G175/index.php\u0022\u003EW3C\u2019s in-depth colour picker\u003C/a\u003E will cover feature number 1 noted prior.\u003C/li\u003E\n \u003Cli\u003EThe \u003Ca href=\u0022http://www.bbc.co.uk/accessibility\u0022\u003EBBC\u2019s accessibility page\u003C/a\u003E has a good range of colour and spacing options.\u003C/li\u003E\n \u003Cli\u003EAdd all visual presentation options to the header of your website, so they are some of the first things that your users see.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EThe following five features are cumulative, as all must be in place to pass Guideline 1.4.8:\u003C/p\u003E\n\u003Col\u003E\n \u003Cli\u003EProvide a tool that enables your customers to select from a number of background and foreground colours; and\u003C/li\u003E\n \u003Cli\u003EText blocks must be no wider than 80 characters (make sure resized browser windows do not need horizontal scrolling); and\u003C/li\u003E\n \u003Cli\u003EText is not justified to both sides of the webpage; and\u003C/li\u003E\n \u003Cli\u003EProvide a tool that enables your users to select from a number of line and paragraph spacing options \u2013 one of the options must give line spacing that is at least 1.5 in text blocks and spaces between paragraphs are at least 1.5x line spacing; and\u003C/li\u003E\n \u003Cli\u003EText can be resized in a browser up to 200% without requiring the user to scroll horizontally (you may have fulfilled this when you complied with Guideline 1.4.4).\u003C/li\u003E\n\u003C/ol\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-4-4",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-4-4\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "1-4-9",
+    "id": "visual-audio-contrast-text-images",
+    "title": "Images of Text (No Exception)",
+    "description": "Images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed.",
+    "uri": "http://www.w3.org/TR/WCAG20/#visual-audio-contrast-text-images",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Don\u0027t use images of text",
+    "wuhcag_detail": "\u003Cp\u003ESome of your users will visit your website using a text-only browser, or might have images turned off in a regular browser. Images of text cause problems, as they are harder for those users to understand.\u003C/p\u003E\n\u003Cp\u003EImages of text also cause problems for your users if they like to resize websites to read them more clearly, because images do not work well this way. They also add to the time it takes your website to load, another key reason users will leave your website.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EYou may already comply with this guideline, depending on how you addressed Guideline 1.4.5.\u003C/li\u003E\n \u003Cli\u003EImages of text are subject to guidelines on colour contrast. See Guideline 1.4.3 and Guideline 1.4.6.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EDon\u0027t use an image of text when you can use plain text.\u003C/li\u003E\n \u003Cli\u003EDisplay quotes as text rather than images.\u003C/li\u003E\n \u003Cli\u003EUse \u003Cabbr title=\u0022Cascading Style Sheets\u0022\u003ECSS\u003C/abbr\u003E to style headings.\u003C/li\u003E\n \u003Cli\u003EUse CSS to style navigation menus as text.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-1-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-4-3",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "1-4-5",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "1-4-6",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-4-3\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00221-4-5\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00221-4-6\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-1-1",
+    "id": "keyboard-operation-keyboard-operable",
+    "title": "Keyboard",
+    "description": "All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user\u0027s movement and not just the endpoints.",
+    "uri": "http://www.w3.org/TR/WCAG20/#keyboard-operation-keyboard-operable",
+    "conformance_level": "A",
+    "wuhcag_summary": "Accessible by keyboard only",
+    "wuhcag_detail": "\u003Cp\u003EYour customers will have varying degrees of motor skills and will benefit from keyboard accessibility. Customers with motor impairment, including many elderly customers, need your help to navigate your website. Many of these customers will use their keyboard to move around your website.\u003C/p\u003E\n\u003Cp\u003EThis article explains what you need to do to meet \u003Cstrong\u003EGuideline 2.1.1 \u2013 Keyboard\u003C/strong\u003E from the \u003Ca href=\u0022http://www.wuhcag.com/web-content-accessibility-guidelines/\u0022\u003EWeb Content Accessibility Guidelines 2.0\u003C/a\u003E.\u003C/p\u003E\n\u003Cp\u003EAll parts of your website must pass keyboard accessibility. That means your forms, menus, shopping cart and everything between. On top of that, you cannot require specific timings for keystrokes to access any feature on your website.\u003C/p\u003E\n",
+    "wuhcag_tips": "",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n\t\u003Cli\u003EA clean \u003Cabbr title=\u0022HyperText Markup Language\u0022\u003EHTML\u003C/abbr\u003E and \u003Cabbr title=\u0022Cascading Style Sheets\u0022\u003ECSS\u003C/abbr\u003E website will often have keyboard accessibility without further work - a great example of why you need to invest in web design and development from the outset\u003C/li\u003E\n\u003C/ul\u003E\n\u003Ch2\u003EAuditing keyboard accessibility\u003C/h2\u003E\n\u003Cul\u003E\n\t\u003Cli\u003EUnplug your mouse and make sure you can fully use your website with your keyboard\u003C/li\u003E\n\t\u003Cli\u003EMake sure no function on your website requires timed keystrokes - such as double tap enter/return within two seconds to submit\u003C/li\u003E\n\u003C/ul\u003E\n\u003Ch2\u003EA few more things\u003C/h2\u003E\n\u003Cp\u003EAt the lowest level of accessibility (which \u003Cstrong\u003E2.1.1 - Keyboard\u003C/strong\u003E is), you can get away with functions that require a mouse pointer for input. These are things like free drawing tools and some types of game. Just think carefully about who you are excluding when you use these features.\u003C/p\u003E\n\u003Cp\u003EOne thing that gets thrown out a lot by keyboard accessibility advocates is \u2018Access keys\u2019. You\u2019re already familiar with access keys, which is why people are quick to accept them as useful. Access keys are keyboard shortcuts like ctrl \u002B \u00A0p to print pr ctrl \u002B s to save.\u003C/p\u003E\n\u003Cp\u003EAccess keys work great in programs like Microsoft Word and Adobe Reader because they\u2019re in a controlled environment. Out on the wild wild web, things aren\u2019t so simple. Your customers access your website on a number of web browsers; some use Internet Explorer, some Firefox, some Google Chrome and so on... These web browsers have different levels of support for Access keys.\u003C/p\u003E\n\u003Cp\u003EFrustratingly, Access keys are a good idea for\u00A0keyboard\u00A0accessibility with bad implementation. If you\u2019re a regular computer user, you probably use ctrl \u002B p \u00A0much more often than selecting the menu with your mouse pointer. WebAIM has an \u003Ca href=\u0022http://webaim.org/techniques/keyboard/accesskey\u0022\u003Earticle about Access keys\u003C/a\u003E if you want to know more. My advice: avoid them.\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-1-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-3",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "2-4-7",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-1-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-3\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00222-4-7\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-1-2",
+    "id": "keyboard-operation-trapping",
+    "title": "No Keyboard Trap",
+    "description": "If keyboard focus can be moved to a component of the page using a keyboard interface, then focus can be moved away from that component using only a keyboard interface, and, if it requires more than unmodified arrow or tab keys or other standard exit methods, the user is advised of the method for moving focus away.",
+    "uri": "http://www.w3.org/TR/WCAG20/#keyboard-operation-trapping",
+    "conformance_level": "A",
+    "wuhcag_summary": "Your website must not trap keyboard users",
+    "wuhcag_detail": "\u003Cp\u003EYour users have varying degrees of motor skills and may use your website with only their keyboard.\nYou must make sure that keyboard-only users can\u2019t get stuck anywhere on your site. All parts of your website should be reachable by keyboard alone (See Guideline 2.1.1). Your users must also be able to navigate away from all parts of your website. If your users can reach a feature (such as a subscribe form) by keyboard but can\u2019t leave it by keyboard, they are keyboard trapped.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EUnplug your mouse and make sure you can fully use your website with your keyboard.\u003C/li\u003E\n \u003Cli\u003EIt\u2019s tempting to use non-standard navigation with a text explanation of what to do, but this isn\u0027t worth your time. Stick to the Tab and arrow keys and the majority of your customers will already know how to use your website.\u003C/li\u003E\n \u003Cli\u003EBe wary of third-party adverts and widgets, often these are not accessible.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003ETest your website to make sure you can navigate away from, as well as to, all parts of your website by keyboard only.\u003C/li\u003E\n \u003Cli\u003EMake sure all navigation is controllable by either the \u2018Tab\u2019 or arrow keys, which is a standard many people are familiar with.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-1-1",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-1-3",
+    "id": "keyboard-operation-all-funcs",
+    "title": "Keyboard (No Exception)",
+    "description": "All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes.",
+    "uri": "http://www.w3.org/TR/WCAG20/#keyboard-operation-all-funcs",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Your website is accessible by keyboard only, without exception",
+    "wuhcag_detail": "\u003Cp\u003EYour users have varying degrees of motor skills and may use your website with only their keyboard. Users with motor impairment, including many elderly users, need help to navigate your website.\u003C/p\u003E\n\u003Cp\u003EAll parts of your website must be accessible by keyboard only. That means, without a mouse or pointing device, your forms, menus, shopping cart and everything between. On top of that, you cannot require specific timings for keystrokes to access any feature.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EUnlike the lower-level Guideline 2.1.1, there are no exceptions here. All aspects of your website must be accessible by keyboard. It\u2019s up to you to decide if Level AAA conformance is worth you removing any mouse-only features.\u003C/li\u003E\n \u003Cli\u003EUnplug your mouse and make sure you can fully use your website with your keyboard.\u003C/li\u003E\n \u003Cli\u003EMake sure no function on your website requires timed keystrokes (for example, \u2018 double tap on enter within two seconds\u2019 to submit).\u003C/li\u003E\n \u003Cli\u003EDon\u2019t use \u2018access keys\u2019 (assigning a navigation link to a particular key) or page-specific key commands as they can conflict with assistive technology.\u003C/li\u003E\n \u003Cli\u003EBe wary of third-party adverts and widgets, often these are not accessible.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EA clean \u003Cabbr title=\u0022HyperText Markup Language\u0022\u003EHTML\u003C/abbr\u003E and \u003Cabbr title=\u0022Cascading Style Sheets\u0022\u003ECSS\u003C/abbr\u003E website will often have keyboard accessibility without further work. This is a great example of why you need to invest in web design and development from the outset.\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-1-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-1-2",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-1-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-2-1",
+    "id": "time-limits-required-behaviors",
+    "title": "Timing Adjustable",
+    "description": "For each time limit that is  set by the content, at least one of the following is true:",
+    "uri": "http://www.w3.org/TR/WCAG20/#time-limits-required-behaviors",
+    "conformance_level": "A",
+    "wuhcag_summary": "Time limits have user controls",
+    "wuhcag_detail": "\u003Cp\u003EIf any of your content is time-controlled, you risk losing users who need more time read and understand the information on your website.\u003C/p\u003E\n\u003Cp\u003ETime-controlled content is anything on your website that expires or becomes unusable by your users after a certain time. A common example is giving a user ten minutes to fill in and send a form. There are functional reasons to set time limits, but you must consider all of your users.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003ETake as much content outside of time limits as possible.\u003C/li\u003E\n \u003Cli\u003EMake sure any user controls you provide are keyboard accessible.\u003C/li\u003E\n \u003Cli\u003EIf you use a pop-up to give your users the option to extend a time limit, consider Guideline 2.2.4.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n\u003Cli\u003EIf your website uses a time limit:\n \u003Cul\u003E\n  \u003Cli\u003EGive your users an option to turn off the time limit before it begins (for example, a landing page before the time-controlled page can display a message that shows your customers what to do); or\u003C/li\u003E\n  \u003Cli\u003EGive your users the option to adjust the time limit before it begins, over a range of at least ten times the default setting (you can do this with a landing page too); or\u003C/li\u003E\n  \u003Cli\u003EGive your users the option to extend the period at least twenty seconds before it expires. This must be a simple action like clicking a button and must be available to use at least ten times.\u003C/li\u003E\n \u003C/ul\u003E\n\u003C/li\u003E\n\u003Cli\u003EIf your website has moving or animated text, users must be able to pause the movement.\u003C/li\u003E\n\u003Cli\u003EIf your website has a feature that updates automatically (for example, with the latest football scores), you must allow your users to delay the frequency of the updates by at least ten times the default setting.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-2-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-2-3",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "2-2-4",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "2-2-5",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-2-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-2-3\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00222-2-4\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00222-2-5\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-2-2",
+    "id": "time-limits-pause",
+    "title": "Pause, Stop, Hide",
+    "description": "For moving, blinking, scrolling, or auto-updating information, all of the following are true:",
+    "uri": "http://www.w3.org/TR/WCAG20/#time-limits-pause",
+    "conformance_level": "A",
+    "wuhcag_summary": "Provide user controls for moving content",
+    "wuhcag_detail": "\u003Cp\u003EHow many times have you visited a website that tries to get your attention with movement? Your eyes catch the scrolling text or a blinking advert, and you take notice for a second or two. More often than not, what you looked at wasn\u0027t why you were visiting the website.\u003C/p\u003E\n\u003Cp\u003EYou try to return to what you were doing, except now it\u2019s harder to focus because the movement is in the corner of your eye. You end up leaving the website because you can\u0027t complete what you started.\u003C/p\u003E\n\u003Cp\u003EThat\u2019s the effect of scrolling and blinking content on your average user and that\u2019s enough of a reason to avoid it altogether. Now, consider the effect on your users with reading or concentration difficulties. I hope that you can understand why you must provide your users with controls to pause moving content.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EThe guideline is more forgiving than I am. It lets you offer your users a pause option, but I suggest you remove anything that moves, scrolls or blinks altogether.\u003C/p\u003E\n\u003Cp\u003EIt also covers auto-updating content, which is where the strength of the guideline lies. Auto-updating content can be great. You could use it to show the latest sports scores, share prices or your Twitter feed. While the guideline applies to all moving, blinking and scrolling content, I\u2019d love to see you eliminate all but auto-updating content.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EMoving, blinking or scrolling content must have an option to pause, stop or hide it; and\u003C/li\u003E\n \u003Cli\u003EAuto-updating content must have the same options; or\u003C/li\u003E\n \u003Cli\u003EAn option to control frequency (see Guideline 2.2.1 for advice).\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-2-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-3-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-3-2",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-2-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-3-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-3-2\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-2-3",
+    "id": "time-limits-no-exceptions",
+    "title": "No Timing",
+    "description": "Timing is not an essential part of the event or activity presented by the content, except for non-interactive synchronized media and real-time events.",
+    "uri": "http://www.w3.org/TR/WCAG20/#time-limits-no-exceptions",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "No time limits on your website",
+    "wuhcag_detail": "\u003Cp\u003EIf any of your content is time-controlled, you risk losing users who need more time to read and understand the information on your website.\u003C/p\u003E\n\u003Cp\u003ETime-controlled content is anything on your website that expires or becomes unusable by your users after a certain time. A common example is giving a user ten minutes to fill in and send a form. There are functional reasons to set time limits, but you must consider all of your users.\u003C/p\u003E\n",
+    "wuhcag_tips": "",
+    "wuhcag_what_to_do": "\u003Cp\u003EThis guideline builds on Guideline 2.2.1. That guideline (at the lower Level A standard of compliance) requires you to offer users a chance to turn off or extend time limits. At Level AAA, this guideline requires that you do not set time limits at all (with two exceptions below).\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-2-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-2-5",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-2-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-2-5\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-2-4",
+    "id": "time-limits-postponed",
+    "title": "Interruptions",
+    "description": "Interruptions can be postponed or suppressed by the user, except interruptions involving an emergency.",
+    "uri": "http://www.w3.org/TR/WCAG20/#time-limits-postponed",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Don\u0027t interrupt your users",
+    "wuhcag_detail": "\u003Cp\u003ESome of your users will have difficulty maintaining their focus and attention; interrupting their experience may impact their understanding of your content. You can avoid this by eliminating interruptions.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EThe best thing you can do is eliminate all interruptions by default. Allow your users to interact with webpages naturally and don\u2019t try to surprise or manipulate them. If you can\u0027t capture your users\u2019 interest without a pop-up, you have bigger problems than Level AAA.\u003C/p\u003E\n\u003Cp\u003EIf you must use a pop-up, make sure that keyboard focus is on the window-closing \u2018X\u2019 icon in the corner that closes the pop-up. This means keyboard users can close the new window. When they do close it, return focus to the place on the page they were at before the pop-up appeared.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EDon\u0027t use an automatic redirect or refresh function based on a time delay (for example, if a webpage has moved, do not redirect users to the new page after a certain amount of time).\u003C/li\u003E\n \u003Cli\u003EProvide an option for turning off all but \u2018essential\u2019 interruptions (see below).\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-2-1",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-2-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-2-5",
+    "id": "time-limits-server-timeout",
+    "title": "Re-authenticating",
+    "description": "When an authenticated session expires, the user can continue the activity without loss of data after re-authenticating.",
+    "uri": "http://www.w3.org/TR/WCAG20/#time-limits-server-timeout",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Save user data when re-authenticating",
+    "wuhcag_detail": "\u003Cp\u003EIt may be essential for your users to re-authenticate their identity for certain functions. For example, you might set a login to expire after a certain amount of time in case a user leaves their computer unattended in the middle of a purchase.\u003C/p\u003E\n\u003Cp\u003EWhile your website will rightly use this function for your users\u2019 security, you can help your users by saving all information entered by the user. When they re-authenticate (such as logging back in) you can display whatever data they had already entered.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EIf you do ask your users to re-authenticate after a certain amount of time, consider whether your use of a time limit is justified under Guideline 2.2.1 and Guideline 2.2.3.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EWhen you ask a user to re-authenticate their identity, the user can continue exactly as before with saved data (for example, their shopping basket contents, input into forms or accessibility options).\u003C/li\u003E\n \u003Cli\u003EThings like surveys and questionnaires can be saved and completed at a later date.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-2-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-2-3",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-2-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-2-3\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-3-1",
+    "id": "seizure-does-not-violate",
+    "title": "Three Flashes or Below Threshold",
+    "description": "Web pages do not contain anything that flashes more than three times in any one second period, or the flash is below the general flash and red flash thresholds.",
+    "uri": "http://www.w3.org/TR/WCAG20/#seizure-does-not-violate",
+    "conformance_level": "A",
+    "wuhcag_summary": "No content flashes more than three times per second",
+    "wuhcag_detail": "\u003Cp\u003ETo make your website as safe as possible for all users, you must limit the amount of flashing media. Flashing content can harm the health of some users.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003ERemember, flashing is different to blinking (see Guideline 2.2.2).\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EDon\u0027t add anything to your website that flashes more than three times per second.\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-2-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-2-3",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-2-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-2-3\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-3-2",
+    "id": "seizure-three-times",
+    "title": "Three Flashes",
+    "description": "Web pages do not contain anything that flashes more than three times in any one second period.",
+    "uri": "http://www.w3.org/TR/WCAG20/#seizure-three-times",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "No content flashes more than three times per second",
+    "wuhcag_detail": "\u003Cp\u003ETo make websites as safe as possible for all users, you must limit the amount of flashing media. Flashing content can harm the health of some users.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EThis builds on Guideline 2.3.1 by removing an exception that I recommend you ignore anyway.\u003C/li\u003E\n \u003Cli\u003ERemember, flashing is different to blinking (see Guideline 2.2.2).\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EDon\u0027t add anything to your website that flashes more than three times a second.\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-2-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-3-1",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-2-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-3-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-4-1",
+    "id": "navigation-mechanisms-skip",
+    "title": "Bypass Blocks",
+    "description": "A mechanism is available to bypass blocks of content that are repeated on multiple Web pages.",
+    "uri": "http://www.w3.org/TR/WCAG20/#navigation-mechanisms-skip",
+    "conformance_level": "A",
+    "wuhcag_summary": "Provide a \u2018Skip to Content\u2019 link",
+    "wuhcag_detail": "\u003Cp\u003EScreen readers announce all of the links on the page to the user, in order.  To help your users navigate your website, provide a way for them to bypass parts of each page, such as long navigation links, links in your header and other repetitive content.\u003C/p\u003E\n\u003Cp\u003EYou can help your users bypass these blocks by adding a \u2018Skip to Content\u2019 link to your website\u0027s header. This link moves the user from the top of the page (above your header) down to the start of the page\u2019s content. This means users with screen readers can skip the repetitive content and get a better experience of your website.\u003C/p\u003E\n\u003Cp\u003EThe same goes for users who browse your website with a lot of zoom in order to understand it. They need extra help navigating to what\u0027s important. Allowing them to skip your menu helps.\u003C/p\u003E\n",
+    "wuhcag_tips": "",
+    "wuhcag_what_to_do": "\u003Cp\u003EAdd a \u2018Skip to Content\u2019 link to all pages on your website. It\u2019s best if you make the link visible.\u003C/p\u003E\n\u003Cp\u003EThe easiest way to add a \u2018Skip to Content\u2019 link to your website is to use of a great piece of code from the guys on the PayPal Accessibility Team. They produced something called \u003Ca href=\u0022https://github.com/paypal/skipto\u0022\u003Eskipto\u003C/a\u003E, which adds a link for you. Best of all if you\u2019re using WordPress or Drupal, there are plugins you can use.\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-3-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "3-2-3",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-3-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00223-2-3\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-4-10",
+    "id": "navigation-mechanisms-headings",
+    "title": "Section Headings",
+    "description": "Section headings are used to organize the content.",
+    "uri": "http://www.w3.org/TR/WCAG20/#navigation-mechanisms-headings",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Break up content with headings",
+    "wuhcag_detail": "\u003Cp\u003EAdding section headings to all content will help your users understand your website. They are useful for users who have difficulty focusing or remembering where they are on a page, as well as users with a visual impairment, who may navigate by skipping between headings.\u003C/p\u003E\n\u003Cp\u003EYou can help these users, and everyone else, by ensuring that all content on your website is broken up by clear and informative headings.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EThe \u003Cabbr title=\u0022World Wide Web Consortium\u0022\u003EW3C\u003C/abbr\u003E define a \u003Cq\u003Esection\u003C/q\u003E as a \u003Cq\u003Eself-contained portion of written content that deals with one or more related topics or thoughts.\u003C/q\u003E\u003Ca href=\u0022http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html\u0022\u003E See \u0027Understanding WCAG 2.0\u0027\u003C/a\u003E\u003C/li\u003E\n \u003Cli\u003EA section may consist of one or more paragraphs and include graphics, tables, lists and sub-sections.\u003C/li\u003E\n \u003Cli\u003EBeware of making your content harder to read by forcing in too many headings.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EAdd a heading for every new thought or topic in your content (for example, a travel article may have headings to indicate the distinct sections on dining, transportation, and lodging).\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-3-1",
+        "conformance_level": ""
+      },
+      {
+        "Section": "1-3-2",
+        "conformance_level": ""
+      },
+      {
+        "Section": "2-4-6",
+        "conformance_level": ""
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-3-1\u0022",
+        "ConformanceLevel": "\u0022\u0022"
+      },
+      {
+        "Section": "\u00221-3-2\u0022",
+        "ConformanceLevel": "\u0022\u0022"
+      },
+      {
+        "Section": "\u00222-4-6\u0022",
+        "ConformanceLevel": "\u0022\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-4-2",
+    "id": "navigation-mechanisms-title",
+    "title": "Page Titled",
+    "description": "Web pages have titles that describe topic or purpose.",
+    "uri": "http://www.w3.org/TR/WCAG20/#navigation-mechanisms-title",
+    "conformance_level": "A",
+    "wuhcag_summary": "Use helpful and clear page titles",
+    "wuhcag_detail": "\u003Cp\u003EWeb page titles tell your users where they are on your website. A good title tells your users which page they are on and what that page is for.\u003C/p\u003E\n\u003Cp\u003EA page title is what users see in the very top bar of your web browser. A good web page title tells users what the page is about without needing to read more. This lets users quickly understand if they are on the right page.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EIn many cases, it makes sense to repeat the page title or a variation of it as the top heading on your page. \u003C/li\u003E\n \u003Cli\u003EType all of your page titles into a spreadsheet and review them.  If they make sense out of context, they will work on your website.\u003C/li\u003E\n \u003Cli\u003EUse these page titles in your sitemap (See Guideline 2.4.5 and Guideline 2.4.8) to make it more accessible.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EGive each page on your website a unique and descriptive title.\u003C/p\u003E\n\u003Cp\u003EMany websites use a Content Management System (CMS) that controls page titles. Don\u0027t worry \u2013 this isn\u0027t as scary as it sounds. You\u2019ve probably already got one, such as the free and popular WordPress. A good CMS will allow you to set individual page titles with no need to touch any code.\u003C/p\u003E\n\u003Cp\u003EA useful format for writing page titles is: \u2018Page name \u2013 Page description \u2013 Website name\u2019\u003C/p\u003E\n\u003Cp\u003EFor example: \u2018About Us \u2013 Learn our Secrets \u2013 ACME Corp\u2019\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-3-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-3-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-5",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "2-4-8",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-3-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-3-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-5\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00222-4-8\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-4-3",
+    "id": "navigation-mechanisms-focus-order",
+    "title": "Focus Order",
+    "description": "If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability.",
+    "uri": "http://www.w3.org/TR/WCAG20/#navigation-mechanisms-focus-order",
+    "conformance_level": "A",
+    "wuhcag_summary": "Pages work in a logical order",
+    "wuhcag_detail": "\u003Cp\u003EYour users need to find their way around your website in a sequential and meaningful order. You can control this with the \u2018focus order\u2019 of your website.\u003C/p\u003E\n\u003Cp\u003E\u2018Focus order\u2019 is the sequence in which a user accesses elements on your website. For example, some users can\u0027t use a mouse and will \u2018tab\u2019 through your website \u2013 they must access elements in an order that makes sense. This order is as simple as a bit of logic, such as going from your header to your menu to your page content.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EIf you have complied with Guideline 2.1.1, you may have already covered elements of this guideline.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EA well-made HTML website will often comply with this guideline.\u003C/li\u003E\n \u003Cli\u003EUnplug your mouse and verify that you can use the \u2018Tab\u2019 key to navigate to every part of your website and use every function, including search boxes and forms \u2013 make sure each page has a sensible focus order.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-3-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-1-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-7",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-3-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-7\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-4-4",
+    "id": "navigation-mechanisms-refs",
+    "title": "Link Purpose (In Context)",
+    "description": "The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.",
+    "uri": "http://www.w3.org/TR/WCAG20/#navigation-mechanisms-refs",
+    "conformance_level": "A",
+    "wuhcag_summary": "Every link\u0027s purpose is clear from its context",
+    "wuhcag_detail": "\u003Cp\u003EIt\u0027s essential that you make your hyperlinks (usually just called \u2018links\u2019) clear and easy to understand.\nUsers with assistive technology, like a screen reader, often hear all the links on a page to help them find where they want to go. Others may view your website highly magnified, so the user will only see the link text and a few words around it at any one time.\u003C/p\u003E\n\u003Cp\u003ETo help your users, your link text (the words that are linked, often called \u2018anchor text\u2019) must make the link destination clear, in the context of their surrounding content.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EFull disclosure: there is another option, but it\u2019s not an approach I recommend. You could explain the purpose of a link in its title attribute. However, title attributes are not a great solution as they have patchy support across web browsers, screen readers and other types of assistive technology. Leverage your other options to make links clear.\u003C/p\u003E\n\u003Cp\u003EA good writer will only ever need the first option, making the link purpose clear for the link text. It is the most accessible solution and the best for your users. There is always a way to make your link accessible using link text alone.  At Level AAA, Guideline 1.4.9 requires you to make links accessible using only the link text anyway.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003ETo comply with this guideline, make sure that for each link on your website:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EThe purpose of the link is clear from the link text (for example, \u2018My blog\u2019); or\u003C/li\u003E\n \u003Cli\u003EThe purpose of the link is clear from the surrounding content, meaning the same sentence, paragraph or cell in a table (for example, \u2018Visit my blog\u2019 ); or\u003C/li\u003E\n \u003Cli\u003EIf the link is an image, the alt text of the image makes the link purpose clear (for example, \u2018Luke McGrath \u2013 Visit my blog\u2019); and\u003C/li\u003E\n \u003Cli\u003ELinks with the same destination have the same description (but links don\u2019t share a description if they point to different places).\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-1-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-4-9",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-4-9\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-4-5",
+    "id": "navigation-mechanisms-mult-loc",
+    "title": "Multiple Ways",
+    "description": "More than one way is available to locate a Web page within a set of Web pages except where the Web Page is the result of, or a step in, a process.",
+    "uri": "http://www.w3.org/TR/WCAG20/#navigation-mechanisms-mult-loc",
+    "conformance_level": "AA",
+    "wuhcag_summary": "Offer several ways to find pages on your website",
+    "wuhcag_detail": "\u003Cp\u003EAll of your users benefit from a website designed with them in mind. They need a variety of ways to navigate to the pages they want to visit. Some of your users will have difficulty understanding your website, so will benefit even more from clear navigation and different ways to access your pages.\u003C/,p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EA good HTML sitemap will depend on the structure of your website. Design your sitemap so that it best reflects the structure of your website pages and contains all your pages.\u003C/li\u003E\n \u003Cli\u003EA \u2018related pages\u2019 section (which shows links to similar pages on your website) is a good way of helping users navigate around your website.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EProvide multiple ways for users to find your website\u2019s pages by:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EAdding an \u003Cabbr title=\u0022HyperText Markup Language\u0022\u003EHTML\u003C/abbr\u003E sitemap page (which links to every page on your website) and link to it after the \u2018Skip to Content\u2019 link from Guideline 2.4.1; and\u003C/li\u003E\n \u003Cli\u003EIncluding a search function on every page (by adding it to the header); and\u003C/li\u003E\n \u003Cli\u003EProviding a clear and consistent main navigation menu.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-4-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-8",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-4-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-8\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-4-6",
+    "id": "navigation-mechanisms-descriptive",
+    "title": "Headings and Labels",
+    "description": "Headings and labels describe topic or purpose.",
+    "uri": "http://www.w3.org/TR/WCAG20/#navigation-mechanisms-descriptive",
+    "conformance_level": "AA",
+    "wuhcag_summary": "Use clear headings and labels",
+    "wuhcag_detail": "\u003Cp\u003EA well-written page is always broken up with clear and descriptive headings. They make it easier for your users to scan and find the section they are interested in. Headings also break up large sections of text so that your content isn\u0027t overwhelming to read.\u003C/p\u003E\n\u003Cp\u003ESome of your users benefit further from pages with semantic headings and labels. Headings particularly help people with visual impairments, who often skip between headings when using a screen reader.\u003C/p\u003E\n\u003Cp\u003ELabelling elements on a page will also help these users understand where they are. Elements introduced with \u003Cabbr title=\u0022HyperText Markup Language 5\u0022\u003EHTML5\u003C/abbr\u003E, such as \u0027header\u0027, \u0027footer\u0027 and \u0027aside\u0027, will make that even easier to do.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EA single letter of the alphabet can be a good heading (for example, in an alphabetical index).\u003C/li\u003E\n \u003Cli\u003EIf you regularly produce similar content, keep headings consistent (for example, a website about film reviews might have \u2018Plot\u2019, \u2018Characters\u2019 and \u2018Verdict\u2019 on each individual page).\u003C/li\u003E\n \u003Cli\u003EHeadings in HTML range from H1 (the most important) to H6 (the least important). It\u2019s best to reserve Heading1 (H1) on a web page for the title of that page. \u003C/li\u003E\n \u003Cli\u003EHeadings don\u2019t need to decrease from 1 to 6 on every page. While you don\u2019t need to use all of the headings, they should still be sequential. For example, avoid skips from H2 to H4.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EUse informative headings and subheadings where appropriate (a change in topic or purpose) to aid navigation through your content.\u003C/li\u003E\n \u003Cli\u003ELabel all elements (for example, sidebar widgets, forms, search boxes, tables).\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-3-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-3-2",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-3-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-3-2\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-4-7",
+    "id": "navigation-mechanisms-focus-visible",
+    "title": "Focus Visible",
+    "description": "Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.",
+    "uri": "http://www.w3.org/TR/WCAG20/#navigation-mechanisms-focus-visible",
+    "conformance_level": "AA",
+    "wuhcag_summary": "Ensure keyboard focus is visible and clear",
+    "wuhcag_detail": "\u003Cp\u003EYour users need to find their way around your website in a sequential and meaningful order. If they use a keyboard to navigate your website, they should be able to see which element they are on at any time.\u003C/p\u003E\n\u003Cp\u003EThe best way to do this is to style a visible border or outline around the element in use, whether it\u0027s a form field, link, menu, content area or any other element. This makes it easier for your users to understand where they are on a page.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EA good \u003Cabbr title=\u0022HyperText Markup Language\u0022\u003EHTML\u003C/abbr\u003E and CSS website will often already conform to this guideline. Check yours to be sure.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EMake the keyboard focus visible on all elements (menu items, form fields, links, etc\u2026).\u003C/li\u003E\n \u003Cli\u003EUse \u003Cabbr title=\u0022Cascading Style Sheets\u0022\u003ECSS\u003C/abbr\u003E to apply a visual aid to keyboard focus \u2013 a border and/or underline is best.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-1-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-3",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-3\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-4-8",
+    "id": "navigation-mechanisms-location",
+    "title": "Location",
+    "description": "Information about the user\u0027s location within a set of Web pages is available.",
+    "uri": "http://www.w3.org/TR/WCAG20/#navigation-mechanisms-location",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Let users know where they are on your website",
+    "wuhcag_detail": "\u003Cp\u003ESome of your users will have problems understanding the structure of your website. They can get lost, especially during interactions like checkouts that take place over a few pages. You can help your users by making it clear where they are on your website.\u003C/p\u003E\n\u003Cp\u003EThis might be as simple as adding breadcrumbs and a sitemap to your website.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EUse full page titles for breadcrumbs when they are 1-3 words long (otherwise they get too long to be displayed).\u003C/li\u003E\n \u003Cli\u003EAbbreviate longer titles to make them easier to read (for example, \u2018A Guide To Exotic Fish\u2019 could just as well be \u2018Exotic Fish\u2019 for the purpose of a breadcrumb).\u003C/li\u003E\n \u003Cli\u003EFor a process that takes a few pages (like a shopping cart), show all the steps in the process and highlight where the user is.\u003C/li\u003E\n \u003Cli\u003EIf a page has a too many breadcrumbs, perhaps your website could be better organised.\u003C/li\u003E\n \u003Cli\u003EUse your page titles in your sitemap, organised under subheadings.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EUse breadcrumbs to help with navigation. Show the sequence a user is following and where they are in that sequence. For example: You are here: Home \u003E Fish \u003E Bass; and\u003C/li\u003E\n \u003Cli\u003EAdd a sitemap page to your website (see Guideline 2.4.5) so your users have another way of finding what they want. Add a link to the sitemap somewhere prominent like the header.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-4-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-5",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-4-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-5\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "2-4-9",
+    "id": "navigation-mechanisms-link",
+    "title": "Link Purpose (Link Only)",
+    "description": "A mechanism is available to allow the purpose of each link to be identified from link text alone, except where the purpose of the link would be ambiguous to users in general.",
+    "uri": "http://www.w3.org/TR/WCAG20/#navigation-mechanisms-link",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Every link\u0027s purpose is clear from its text",
+    "wuhcag_detail": "\u003Cp\u003EIt\u0027s essential that you make your hyperlinks (usually just called \u2018links\u2019) clear and easy to understand.\nUsers with assistive technology, like a screen reader, often hear all the links on a page to help them find where they want to go. Others may view your website highly magnified, so the user will only see the link text and a few words around it at any one time.\u003C/p\u003E\n\u003Cp\u003ETo help your users, your link text alone (the words that are linked, often called \u2018anchor text\u2019) must make the link destination clear.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EThis Guideline builds on Guideline 2.4.4 by focusing only on the link text and removing some exceptions.\u003C/li\u003E\n \u003Cli\u003EEnsure that links with the same destination have the same description (but links don\u2019t share a description if they point to different places).\u003C/li\u003E\n \u003Cli\u003E\u2018Click here\u2019 and \u2018Read more\u2019 links fail this guideline.\u003C/li\u003E\n \u003Cli\u003EAvoid using the title attribute (which was an exception in Guideline 2.4.4) as is not sufficient to pass this guideline.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003ETo comply with this guideline, make sure that for each link on your website:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EThe purpose of the link is clear from the link text; or\u003C/li\u003E\n \u003Cli\u003EIf the link is an image, the alt text of the image makes the link purpose clear.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-1-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-4",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "3-2-4",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-4\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00223-2-4\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-1-1",
+    "id": "meaning-doc-lang-id",
+    "title": "Language of Page",
+    "description": "The default human language of each Web page can be programmatically determined.",
+    "uri": "http://www.w3.org/TR/WCAG20/#meaning-doc-lang-id",
+    "conformance_level": "A",
+    "wuhcag_summary": "Every page of your website has a language assigned",
+    "wuhcag_detail": "\u003Cp\u003ESetting every webpage\u0027s \u003Cabbr title=\u0022HyperText Markup Language\u0022\u003EHTML\u003C/abbr\u003E language is an easy way to help your users, including those browsing your website with assistive technology. Setting a language is important because the way that screen readers pronounce words depends on the HTML language assigned to your website.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003ESet the language in your template and you\u2019ll only need to do this once.\u003C/li\u003E\n \u003Cli\u003EIf you trade internationally and have different parts of your website in different languages, make sure they are assigned correctly.\u003C/li\u003E\n \u003Cli\u003EHTML language codes match the \u003Cabbr title=\u0022International Organisation for Standardisation\u0022\u003EISO\u003C/abbr\u003E language codes standard. W3Schools has a \u003Ca href=\u0022http://www.w3schools.com/tags/ref_language_codes.asp\u0022\u003Efull list of language codes\u003C/a\u003E.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EEnsure that each page of your website has a language assigned to it.\u003C/p\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "3-1-3",
+        "conformance_level": ""
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00223-1-3\u0022",
+        "ConformanceLevel": "\u0022\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-1-2",
+    "id": "meaning-other-lang-id",
+    "title": "Language of Parts",
+    "description": "The human language of each passage or phrase in the  content can be programmatically determined except for proper names, technical terms, words of indeterminate language, and words or phrases that have become part of the vernacular of the immediately surrounding text.",
+    "uri": "http://www.w3.org/TR/WCAG20/#meaning-other-lang-id",
+    "conformance_level": "AA",
+    "wuhcag_summary": "Tell users when the language on a page changes",
+    "wuhcag_detail": "\u003Cp\u003EIf your website has content in a different language to its main language, you should tell your users about the change. This helps those who use assistive technology to read the full content.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003E\u003Cabbr title=\u0022HyperText Markup Language\u0022\u003EHTML\u003C/abbr\u003E language codes match the \u003Cabbr title=\u0022International Organisation for Standardisation\u0022\u003EISO\u003C/abbr\u003E language codes standard.\u003C/li\u003E\n \u003Cli\u003EIf you have an alternative language version or translation of some content, link to it with the name of the language in that language (for example, \u2018Francais\u2019, \u2018Deutsch\u2019) and add a language tag to the link.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003ESet your website\u0027s main language by meta tag (see Guideline 3.1.1).\u003C/li\u003E\n \u003Cli\u003EAdd a language attribute to content that is not in the main language.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "3-1-1",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00223-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-1-3",
+    "id": "meaning-idioms",
+    "title": "Unusual Words",
+    "description": "A mechanism is available for identifying specific definitions of words or phrases used in an unusual or restricted way, including idioms and jargon.",
+    "uri": "http://www.w3.org/TR/WCAG20/#meaning-idioms",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Explain any strange words",
+    "wuhcag_detail": "\u003Cp\u003ESome of your users will find it hard to read unusual uses of words on your website. Things like figurative language, idioms and jargon can be difficult to process. Avoid using unusual words where you can and explain the use of words when you need to use them.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EIf your use of an unusual word always means the same thing, you only have to define it the first time.\u003C/li\u003E\n \u003Cli\u003EIf your use of an unusual word changes, you must define the word on every occasion (for example, a \u003Cq\u003Ebass\u003C/q\u003E might be a type of fish in one paragraph and a musical instrument in another).\u003C/li\u003E\n \u003Cli\u003EAlways define technical terms and jargon that any user might not understand depending on their familiarity with the subject.\u003C/li\u003E\n \u003Cli\u003EWherever possible, avoid using jargon and idioms. These are bad for novices in your industry and users who don\u0027t natively speak your language.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EAvoid using unusual words and phrases.\u003C/li\u003E\n \u003Cli\u003EIf you need to use an unusual word or phrase, you can explain the meaning to your users by:\u003C/li\u003E\n \u003Cli\u003EShowing the meaning in the text (for example, \u2018I like bass. A bass is a fish.\u2019); or\u003C/li\u003E\n \u003Cli\u003EShowing the meaning in brackets (for example, \u2018I like bass (a type of fish)\u2019; or\u003C/li\u003E\n \u003Cli\u003ELinking the word to a definition on a glossary page on your website; or\u003C/li\u003E\n \u003Cli\u003ELinking the word to a definition footnote on the same page.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "3-1-4",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "3-1-5",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "3-1-6",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00223-1-4\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00223-1-5\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00223-1-6\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-1-4",
+    "id": "meaning-located",
+    "title": "Abbreviations",
+    "description": "A mechanism for identifying the expanded form or meaning of abbreviations is available.",
+    "uri": "http://www.w3.org/TR/WCAG20/#meaning-located",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Explain any abbreviations",
+    "wuhcag_detail": "\u003Cp\u003ESome of your users need help understanding your content. Using abbreviations can cause confusion and prevent your users from understanding your website. Avoid using abbreviations where you can and explain them when you need to use them.\n\u003Cp\u003EAbbreviations (like Dr for Doctor) also include acronyms (\u003Cabbr title=\u0022North Atlantic Treaty Organisation\u0022\u003ENATO\u003C/abbr\u003E) and initialisms (\u003Cabbr title=\u0022Federal Bureau of Investigation\u0022\u003EFBI\u003C/abbr\u003E).\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EAvoid using abbreviations wherever possible (for example, instead of the FBI every time you could say \u2018Federal Bureau of Investigation\u2019 once then refer to them as \u2018the Bureau\u2019. This helps users with a cognitive disability, as they may be confused by abbreviations on each occasion and sending them to a glossary or definition interrupts their concentration (and everyone else\u2019s for that matter).\u003C/li\u003E\n \u003Cli\u003EThe tidiest solution when you need to abbreviate is the HTML option, which creates a hidden expansion that appears on hover and is understood by screen readers.\u003C/li\u003E\n \u003Cli\u003EIf your use of an abbreviation always means the same thing, you only have to define it the first time it appears on a page.\u003C/li\u003E\n \u003Cli\u003EIf your use changes you must define the word on every occasion (for example \u2018Dr\u2019 might mean \u2018Doctor\u2019 in one paragraph and \u2018Drive\u2019 as part of an address in another).\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EAvoid using abbreviations, acronyms and initialisms.\u003C/li\u003E\n \u003Cli\u003EIf you need to use an abbreviation, you can explain the meaning to your users by:\u003C/li\u003E\n \u003Cli\u003EShowing the meaning in the text (for example, Federal Bureau of Investigation (FBI)); or\u003C/li\u003E\n \u003Cli\u003ELinking the abbreviation to a definition on a glossary page on your website; or\u003C/li\u003E\n \u003Cli\u003ELinking the abbreviation to a definition footnote on the same page; or\u003C/li\u003E\n \u003Cli\u003EUsing the abbreviation \u003Cabbr title=\u0022HyperText Markup Language\u0022\u003EHTML\u003C/abbr\u003E tag to expand the abbreviation.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "3-1-3",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "3-1-5",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "3-1-6",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00223-1-3\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00223-1-5\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00223-1-6\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-1-5",
+    "id": "meaning-located",
+    "title": "Abbreviations",
+    "description": "A mechanism for identifying the expanded form or meaning of abbreviations is available.",
+    "uri": "http://www.w3.org/TR/WCAG20/#meaning-located",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Users with nine years of school can read your content",
+    "wuhcag_detail": "\u003Cp\u003EAll of your users need to read your website. That means you need to write with a range of people in mind, from your College Professor to someone straight out of school.\u003C/p\u003E\n\u003Cp\u003EThe key is to write as simply as you can, in clear and plain language.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EYou can never write something that every human on the planet will understand. \u003C/li\u003E\n \u003Cli\u003EShort sentences are easiest to understand.\u003C/li\u003E\n \u003Cli\u003EStick to one topic per paragraph and one thought per sentence.\u003C/li\u003E\n \u003Cli\u003EAvoid slang, jargon and idioms.\u003C/li\u003E\n \u003Cli\u003EUse common words and contractions.\u003C/li\u003E\n \u003Cli\u003EWrite how people speak.\u003C/li\u003E\n \u003Cli\u003EUse bullet points.\u003C/li\u003E\n \u003Cli\u003EUse active, not passive, language (for example, \u2018The words were written by Luke\u2019 is passive, but \u2018Luke wrote the words\u2019 is active).\u003C/li\u003E\n \u003Cli\u003EMicrosoft Word and some online services can check for readability against the Flesch Reading Ease test \u2013 aim for a score over 60.\u003C/li\u003E\n \u003Cli\u003EBUT don\u2019t rely solely on automated tests, use common sense too.\u003C/li\u003E\n \u003Cli\u003E\u003Ca href=\u0022https://www.gov.uk/government-digital-guidance/content-publishing\u0022\u003EGOV.UK has a useful style guide\u003C/a\u003E for content producers.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EThe \u003Cabbr title=\u0022World Wide Web Consortium\u0022\u003EW3C\u003C/abbr\u003E (the writers of the Guidelines), set a benchmark you can test against. The suggested standard is to write so that a person with 7-9 years of schooling can understand you.\u003C/p\u003E\n\u003Cp\u003EYou can get your content to this standard by:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EWriting so that someone with no more than nine years of school can understand you (that\u2019s nine years from their first day at school, so no college or further education).\u003C/li\u003E\n \u003Cli\u003EAdding summaries, images and diagrams to content to help explain meaning.\u003C/li\u003E\n \u003Cli\u003EBreaking up content with well-organised sections and headings.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "3-1-3",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "3-1-4",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "3-1-6",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00223-1-3\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00223-1-4\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00223-1-6\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-1-6",
+    "id": "meaning-pronunciation",
+    "title": "Pronunciation",
+    "description": "A mechanism is available for identifying specific pronunciation of words where meaning of the words, in context, is ambiguous without knowing the pronunciation.",
+    "uri": "http://www.w3.org/TR/WCAG20/#meaning-pronunciation",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Explain any words that are hard to pronounce",
+    "wuhcag_detail": "\u003Cp\u003EYou can help your users by paying attention to words that are hard or confusing to pronounce. Words like these can make it hard for your users to read your content.\u003C/p\u003E\n\u003Cp\u003EThis includes words that are hard to pronounce (for example, \u2018phenomenon\u2019) and words that are spelled the same but pronounced differently (for example, \u2018bow\u2019 v \u2018bow\u2019). Take extra time to explain these words to your users.\u003C/p\u003E\n",
+    "wuhcag_tips": "",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EAvoid using hard-to-pronounce words. \u003C/li\u003E\n \u003Cli\u003EIf you need to use a hard-to-pronounce word, you can explain the meaning to your users by:\u003C/li\u003E\n \u003Cli\u003EProviding the phonetic pronunciation of words immediately after the word; or\u003C/li\u003E\n \u003Cli\u003ELinking the word to a pronunciation guide on another page on your website; or\u003C/li\u003E\n \u003Cli\u003ELinking the word to a pronunciation guide on the same page.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "3-1-3",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "3-1-4",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00223-1-3\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00223-1-4\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-2-1",
+    "id": "consistent-behavior-receive-focus",
+    "title": "On Focus",
+    "description": "When any user interface component receives focus, it does not  initiate a change of context.",
+    "uri": "http://www.w3.org/TR/WCAG20/#consistent-behavior-receive-focus",
+    "conformance_level": "A",
+    "wuhcag_summary": "Elements do not change when they receive focus",
+    "wuhcag_detail": "\u003Cp\u003EIf your website doesn\u2019t act as users expect it to, they\u0027ll leave and you won\u0027t see them again.\u003C/p\u003E\n\u003Cp\u003EFocus is vital when considering what happens on your website when users reach elements like forms, videos and other interactive elements. Once an element receives focus from users, whether with a mouse or keyboard, the element must not automatically change (known as \u2018changing on focus\u2019). This can disorientate users.\u003C/p\u003E\n\u003Cp\u003EA change of focus is especially troublesome for users who navigate by keyboard.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EMost well-made websites will not have any of these errors by default, you would need to choose to add in change on focus.\u003C/li\u003E\n \u003Cli\u003EA great way to test this guideline is to unplug your mouse and navigate your way round your website. If anything moves, submits or changes on focus, fix it!\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EEnsure no element changes purely by receiving focus.\u003C/li\u003E\n \u003Cli\u003EAvoid both behavioural and visual modifications.\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp\u003EEnsure that:\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli\u003ELinks don\u0027t open automatically on focus; and\u003C/li\u003E\n\u003Cli\u003EForms don\u0027t submit without the user taking action (such as clicking the \u2018Submit\u2019 button); and\u003C/li\u003E\n\u003Cli\u003EThere are no automatic pop-ups; and\u003C/li\u003E\n\u003Cli\u003EFocus never jumps to another element automatically; and\u003C/li\u003E\n\u003Cli\u003ENo other action that occurs on focus alone causes the page to change.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-2-2",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-2-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-2-2",
+    "id": "consistent-behavior-unpredictable-change",
+    "title": "On Input",
+    "description": "Changing the setting of any  user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component.",
+    "uri": "http://www.w3.org/TR/WCAG20/#consistent-behavior-unpredictable-change",
+    "conformance_level": "A",
+    "wuhcag_summary": "Elements do not change when they receive input",
+    "wuhcag_detail": "\u003Cp\u003EIf you want your users to return to your website, make sure it acts as users expect it to.\nWhen a form receives input from users (for example, typing in an address or selecting a date of birth), it must not automatically skip to another field or auto-submit \u2013 known as \u2018changing on input\u2019. This can disorientate users.\u003C/p\u003E\n\u003Cp\u003EOnly submit form data when a user chooses to click a submit button. It\u0027s common sense behaviour, but if you get it wrong, your users will be frustrated and leave.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EThe easiest way to pass Guideline 3.2.2 is to use submit buttons and avoid jumping your users between fields. It\u2019s all about leaving the control in your users\u0027 hands, where it belongs.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EHere are some examples of the kinds of things to look out for:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EForms must not auto-submit when all fields are filled \u2013 this prevents your users from checking and editing what they have written.\u003C/li\u003E\n \u003Cli\u003EFocus (the field where the user will input next) must not automatically jump to the next field in a form once a field is complete.\u003C/li\u003E\n \u003Cli\u003EUsing a control (like selecting yes or no) must not automatically perform the action (for example, selecting to subscribe to a newsletter in a check box must not automatically subscribe your user, they should be able to click a submit button to confirm their decision).\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-1-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "3-2-5",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00223-2-5\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-2-3",
+    "id": "consistent-behavior-consistent-locations",
+    "title": "Consistent Navigation",
+    "description": "Navigational mechanisms that are repeated on multiple Web pages within a set of Web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.",
+    "uri": "http://www.w3.org/TR/WCAG20/#consistent-behavior-consistent-locations",
+    "conformance_level": "AA",
+    "wuhcag_summary": "Use menus in the same place across your website",
+    "wuhcag_detail": "\u003Cp\u003EWhen you visit a website these days, it\u0027s almost second nature to understand where the main menu is and to expect it to be in the same place on every page. Web designers know that having a consistent navigation menu helps users move around websites.\u003C/p\u003E\n\u003Cp\u003EConsistent navigation helps users who may have trouble moving around a website and find themselves \u2018lost\u2019 more often than others. Your users who rely on spatial navigation, due to impaired sight, or need extra help understanding your website will thank you.\u003C/p\u003E\n\u003Cp\u003EThis consistency also applies to standard parts of your website \u2013 things like your search box. Don\u0027t move them all over the place, use a consistent template for key elements.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cp\u003EUsing a standard template for your website will help you meet this guideline.\u003C/p\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EKeep navigation menus in the same location on all pages; and\u003C/li\u003E\n \u003Cli\u003EPresent the options in navigation menus in the same order on all pages; and\u003C/li\u003E\n \u003Cli\u003EKeep all other standard elements (for example, your search box) in the same location on all pages.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-4-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-5",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "3-2-4",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "2-4-8",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-4-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-5\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00223-2-4\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00222-4-8\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-2-4",
+    "id": "consistent-behavior-consistent-functionality",
+    "title": "Consistent Identification",
+    "description": "Components that have the same functionality within a set of Web pages are identified consistently.",
+    "uri": "http://www.w3.org/TR/WCAG20/#consistent-behavior-consistent-functionality",
+    "conformance_level": "AA",
+    "wuhcag_summary": "Use menus in the same place across your website",
+    "wuhcag_detail": "\u003Cp\u003EIt should be obvious that using consistent identification across your website helps your users move around, interact and do what it is you want them to do. Sadly, it\u2019s often overlooked and buttons, icons or links with the same function look completely different.\u003C/p\u003E\n\u003Cp\u003EUsers with screen readers and screen magnifiers benefit even further from consistent identification. They often use familiarity as a means of understanding and selecting functions. Therefore, elements with the same function should be labelled and appear consistent across your website. This includes visually hidden labels for screen readers.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EConsistent is not the same as identical (for example, an arrow icon might link to the next page in a series, but depending on the page the text alternative would be \u2018Go to page X\u2019).\u003C/li\u003E\n \u003Cli\u003EAn image can have different meanings in different contexts, so require different text alternatives to pass this guideline. For example, a tick icon or check mark can mean both \u2018fishing line included with purchase\u2019 and \u2018registration form filled in successfully\u2019).\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EEnsure that:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EAny icons used are consistent (for example, \u2018Print page\u2019 or Twitter link); and\u003C/li\u003E\n \u003Cli\u003EElements with the same function are labelled and named consistently; or\u003C/li\u003E\n \u003Cli\u003EElements with the same function have a consistent text alternative.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-1-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-4",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "2-4-9",
+        "conformance_level": "AAA"
+      },
+      {
+        "Section": "3-2-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "4-1-2",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-4\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00222-4-9\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      },
+      {
+        "Section": "\u00223-2-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00224-1-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-2-5",
+    "id": "consistent-behavior-no-extreme-changes-context",
+    "title": "Change on Request",
+    "description": "Changes of context are initiated only by user request or a mechanism is available to turn off such changes.",
+    "uri": "http://www.w3.org/TR/WCAG20/#consistent-behavior-no-extreme-changes-context",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Don\u2019t change elements on your website until users ask",
+    "wuhcag_detail": "\u003Cp\u003ESome of your users find automatic changes hard to deal with. Unexpected actions can interrupt their concentration and prevent them from reaching their goals. Help your users by keeping them in control and avoiding elements on your website that change automatically.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EThis guideline builds on Guideline 3.2.2 and Guideline 2.2.2 by removing some exceptions, so you may already have passed!\u003C/li\u003E\n \u003Cli\u003EThe best way to redirect a user from one webpage to another is to do it without them noticing. One of the simplest ways to do this is to edit a website\u2019s .htaccess file, which is in the root directory (not all servers will allow you to edit this file, so check with your hosting provider).\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003ETo pass this guideline, you need to ensure the following five statements are true:\u003C/p\u003E\n\u003Col\u003E\n \u003Cli\u003EIf you have an element that updates automatically (like a live news ticker), there is an option to pause this and update only when requested; and\u003C/li\u003E\n \u003Cli\u003EAll links open in the same window, unless it\u2019s essential (for example, opening a transcript to a video); and\u003C/li\u003E\n \u003Cli\u003EIf a link does open in a new window, the user is aware of this (for example, in the anchor text of the link or by an icon); and\u003C/li\u003E\n \u003Cli\u003EForms do not auto-submit when fields are filled; and\u003C/li\u003E\n \u003Cli\u003EAny redirect from one page to another is immediate.\u003C/li\u003E\n\u003C/ol\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "2-2-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "3-3-5",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00222-2-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00223-3-5\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-3-1",
+    "id": "minimize-error-identified",
+    "title": "Error Identification",
+    "description": "If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text.",
+    "uri": "http://www.w3.org/TR/WCAG20/#minimize-error-identified",
+    "conformance_level": "A",
+    "wuhcag_summary": "Clearly identify input errors",
+    "wuhcag_detail": "\u003Cp\u003EEveryone makes mistakes, even you and I. Make it easy for users to understand and correct their mistakes with a bit of guidance. Provide timely and clear error identification guidance when users make mistakes on your website. Using error identification keeps your website running smoothly and keeps your users from getting frustrated.\u003C/p\u003E\n\u003Cp\u003EOne of the worst areas for mistakes websites are forms, including checkouts, newsletter sign-ups and questionnaires. Any of your users can make a simple error that means they can\u2019t submit your form. If users cannot identify their mistakes, they will leave.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EIf a form requires input in a certain format, show and describe the required format.\u003C/li\u003E\n \u003Cli\u003EIf a mandatory field is empty, highlight the field and explain what\u2019s required.\u003C/li\u003E\n \u003Cli\u003EBuild forms to be forgiving, accepting variations on the formats you prefer.\u003C/li\u003E\n \u003Cli\u003EDon\u0027t ask for too much information, just what you need.\u003C/li\u003E\n \u003Cli\u003EBe specific. Use clear, concise instruction and form field labels.\u003C/li\u003E\n \u003Cli\u003EHighlight mistakes in forms with colours and symbols.\u003C/li\u003E\n \u003Cli\u003EDon\u0027t clear a form if a user makes a mistake. Save the information and allow the user to edit their error and continue.\u003C/li\u003E\n \u003Cli\u003EProvide extra help by giving your contact details on all pages (the header or footer are great) and especially near forms.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EIdentify and explain to the user any mistakes that you can detect automatically.\u003C/li\u003E\n \u003Cli\u003EAdd error explanation close to the error, showing what is wrong and how to fix it.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-3-3",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-4-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "3-3-2",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "3-3-3",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "3-3-4",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-3-3\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-4-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00223-3-2\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00223-3-3\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00223-3-4\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-3-2",
+    "id": "minimize-error-cues",
+    "title": "Labels or Instructions",
+    "description": "Labels or instructions are provided when content requires user input.",
+    "uri": "http://www.w3.org/TR/WCAG20/#minimize-error-cues",
+    "conformance_level": "A",
+    "wuhcag_summary": "Label elements and give instructions",
+    "wuhcag_detail": "\u003Cp\u003EChances are your website will have a feature that requires your users to fill in some information. This might be on a checkout page to buy a product, a contact form to get in touch or a newsletter sign-up to opt in to your mailing list. You need to ensure your users know what\u2019s required of them when they reach one of these elements on your website.\u003C/p\u003E\n\u003Cp\u003EWithout clear labels and instructions, your users won\u0027t know what to do.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EInstructions need to take into account how they use sensory characteristics.\u003C/li\u003E\n \u003Cli\u003EThink about how your use of colour affects things like required fields if you want to highlight them by colour. Don\u2019t highlight by colour alone, pick a symbol too.\u003C/li\u003E\n \u003Cli\u003EConsider error identification as well, and make sure that you give helpful instructions when your users make mistakes on forms.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003ELabel all input fields clearly and helpfully.\u003C/li\u003E\n \u003Cli\u003EWhere a field needs a specific format, give an example (For example, for a \u2018date\u2019 field in a form you might use \u2018Enter the date as dd/mm/yyyy\u2019)\u003C/li\u003E\n \u003Cli\u003EMark required fields with an icon and explain what the icon means before the form.\u003C/li\u003E\n \u003Cli\u003EKeep your labels simple \u2013 too much explanation can be counter-productive. Things like \u2018First name\u2019, \u2018Email\u2019 and \u2018Your message\u2019 are fine.\u003C/li\u003E\n \u003Cli\u003EThe same goes for instructions, \u2018Required fields are in red and have a * symbol\u2019 works great. So does \u2018Fill in this form and click \u2018Submit\u2019 to get in touch\u2019.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-3-3",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "1-4-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "3-3-1",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-3-3\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00221-4-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00223-3-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-3-3",
+    "id": "minimize-error-suggestions",
+    "title": "Error Suggestion",
+    "description": "If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.",
+    "uri": "http://www.w3.org/TR/WCAG20/#minimize-error-suggestions",
+    "conformance_level": "AA",
+    "wuhcag_summary": "Suggest fixes when users make errors",
+    "wuhcag_detail": "\u003Cp\u003EAll of your users make mistakes \u2013 they\u0027re only human after all. When they make mistakes on your website (whether it\u0027s their fault or not), they get frustrated.\u003C/p\u003E\n\u003Cp\u003EFortunately, it\u0027s also a great time to demonstrate to your users how much you care about them. Show suggestions and hints when users make mistakes on things like forms and checkouts.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EThis guideline builds on Guideline 3.3.1, by adding a requirement to make a suggestion for user input to fix errors.\u003C/li\u003E\n \u003Cli\u003EBe specific.\u003C/li\u003E\n \u003Cli\u003EIf a user makes an error, provide a list of links that the user can follow to jump back to correct their input.\u003C/li\u003E\n \u003Cli\u003EMake it easy to re-submit incorrect forms by retaining all correct data.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003ETo pass this guideline, you need to make sure that:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EYour forms identify input errors.\u003C/li\u003E\n \u003Cli\u003EWhen the error is missing a required field, communicate this to the user with a text suggestion.\u003C/li\u003E\n \u003Cli\u003EIf the error is in the format of the input, the suggestion shows the correct format (for example, \u2018The date must be in the form DD/MM/YYYY\u2019).\u003C/li\u003E\n \u003Cli\u003EIf the error is because the input needed to be from a limited list of values, provide these values and explain them.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "3-3-1",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00223-3-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-3-4",
+    "id": "minimize-error-reversible",
+    "title": "Error Prevention (Legal, Financial, Data)",
+    "description": "For Web pages that cause legal commitments or financial transactions for the user to occur, that modify or delete user-controllable data in data storage systems, or that submit user test responses, at least one of the following is true:",
+    "uri": "http://www.w3.org/TR/WCAG20/#minimize-error-reversible",
+    "conformance_level": "AA",
+    "wuhcag_summary": "Reduce the risk of input errors for sensitive data",
+    "wuhcag_detail": "\u003Cp\u003EAll users make mistakes when inputting data (for example, into forms and checkouts). You should try to prevent errors occurring, especially when users are committing to legal or financial agreements, or otherwise sharing their data.\u003C/p\u003E\n\u003Cp\u003EUsers can make costly mistakes if they don\u0027t fully understand the implications of their actions or can\u2019t rectify their errors. Error prevention is all about reducing risk to your users by adding in confirmation stages to processes that pose a legal or financial risk.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EGuideline 3.3.6 widens this guideline to include all types of data transfer, not just these high-cost transactions.\u003C/li\u003E\n \u003Cli\u003EThis guideline applies to deletion of data as well as submission.\u003C/li\u003E\n \u003Cli\u003ELegal commitments are transactions where the user incurs a legally binding obligation or benefit.\u003C/li\u003E\n \u003Cli\u003E\u003Cq\u003EUser controlled data\u003C/q\u003E means things like name and address fields for a user\u0027s account.\u003C/li\u003E\n \u003Cli\u003EProvide a confirmation webpage that gives the user a chance to read a summary of everything they have input and positively confirm their actions (especially if inputs were spread over several pages in the process).\u003C/li\u003E\n \u003Cli\u003EValidate forms inline and add an error message if input is incorrect. Be specific in explaining how to fix mistakes.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003ETo pass this guideline, you need to make sure that:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003ELegal commitments, financial transactions, test responses and changes to user controlled data are reversible; or\u003C/li\u003E\n \u003Cli\u003ELegal commitments, financial transactions, test responses and changes to user controlled data are checked for input errors and the user is given a chance to correct any mistakes; or\u003C/li\u003E\n \u003Cli\u003EAdd a confirmation page to the data input submission process that summarises the input and the outcome, with an option to correct or discontinue. This page has an input field (for example, a confirm button or checkbox) that acts as confirmation of the submission.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "3-3-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "3-3-3",
+        "conformance_level": "AA"
+      },
+      {
+        "Section": "3-3-6",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00223-3-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00223-3-3\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      },
+      {
+        "Section": "\u00223-3-6\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-3-5",
+    "id": "minimize-error-context-help",
+    "title": "Help",
+    "description": "Context-sensitive help is available.",
+    "uri": "http://www.w3.org/TR/WCAG20/#minimize-error-context-help",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Your website has detailed help and instructions",
+    "wuhcag_detail": "\u003Cp\u003EYour users have a range of abilities. Some will instinctively know how to use your website and others will struggle. You can help your users get the most from your website by offering help wherever you can. This is especially relevant to forms, where your users need to input the right information for the form to work.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EA link to further information, such as help for a form, counts as an \u201Cessential\u201D exception against opening a link in a new window (see Guideline 3.2.5). Opening a link to help in a new window allows the users to follow the help whilst skipping between windows.\u003C/li\u003E\n \u003Cli\u003EAn example of when further information would help is beside a free text field to answer the question: \u2018Why are you a good candidate for this job?\u2019 The help could offer hints and tips on the correct format for an answer. Make certain, for instance, to note any character or word limit.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003EOffer help on your forms by:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003ELabelling input buttons with the nature of the input (for example, \u2018Subscribe\u2019 or \u2018Buy\u2019); and\u003C/li\u003E\n \u003Cli\u003EWhere an input field needs more information than a label provides, add a link to that information near the field (for example \u2018Help with this answer\u2019); and\u003C/li\u003E\n \u003Cli\u003EWhere a field needs a specific format, use a label, adjacent text or placeholder text showing the correct format (for example, \u2018Date: DD/MM/YYYY\u2019).\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "3-2-5",
+        "conformance_level": "AAA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00223-2-5\u0022",
+        "ConformanceLevel": "\u0022AAA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "3-3-6",
+    "id": "minimize-error-reversible-all",
+    "title": "Error Prevention (All)",
+    "description": "For Web pages that require the user to submit information, at least one of the following is true:",
+    "uri": "http://www.w3.org/TR/WCAG20/#minimize-error-reversible-all",
+    "conformance_level": "AAA",
+    "wuhcag_summary": "Reduce the risk of all input errors",
+    "wuhcag_detail": "\u003Cp\u003EAll users make mistakes when inputting data (for example, into forms and checkouts). Aim to prevent these errors occurring, but make it easy for users to correct errors as they occur.\u003C/p\u003E\n\u003Cp\u003EUsers can make costly mistakes if they don\u0027t fully understand the implications of their actions or can\u2019t rectify their errors. Error prevention is all about reducing risk to your users.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EThis guideline expands on Guideline 3.3.4.\u003C/li\u003E\n \u003Cli\u003EThis guideline applies to deletion of data as well as submission.\u003C/li\u003E\n \u003Cli\u003EAlthough each technique alone is enough to pass this guideline, add as many of the techniques to your process as possible. \u003C/li\u003E\n \u003Cli\u003EProvide a confirmation webpage that gives the user a chance to read a summary of everything they have input, and positively confirm their actions (especially if inputs were spread over several pages in the process).\u003C/li\u003E\n \u003Cli\u003EValidate forms inline and add error messages if input is incorrect. Be specific in explaining how to fix mistakes.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cp\u003ETo pass this guideline, you need to make sure that:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EAll data input submissions are reversible; or\u003C/li\u003E\n \u003Cli\u003EAll data input submissions are checked for input errors and the user is given a chance to correct any mistakes; or\u003C/li\u003E\n \u003Cli\u003EAdd a confirmation page to the data input submission process that summarises the input and the outcome, with an option to correct or discontinue. This page has an input field (for example, a confirm button or checkbox) that acts as confirmation of the submission.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "3-3-4",
+        "conformance_level": "AA"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00223-3-4\u0022",
+        "ConformanceLevel": "\u0022AA\u0022"
+      }
+    ]
+  },
+  {
+    "Section": "4-1-1",
+    "id": "ensure-compat-parses",
+    "title": "Parsing",
+    "description": "In content implemented using markup languages, elements have complete start and end tags, elements are nested according to their specifications, elements do not contain duplicate attributes, and any IDs are unique, except where the specifications allow these features.",
+    "uri": "http://www.w3.org/TR/WCAG20/#ensure-compat-parses",
+    "conformance_level": "A",
+    "wuhcag_summary": "Your website has no major code errors",
+    "wuhcag_detail": "\u003Cp\u003EParsing is the way software like web browsers and assistive technology read and understand a website. It\u0027s important that the different technologies your users use to view your website don\u2019t have trouble parsing your website. Parsing is all about your website\u0027s code.\u003C/p\u003E\n\u003Cp\u003EAll your users will benefit from a website built on clean and modern HTML. Your website will work properly in all web browsers and on all kinds of devices, from computers to tablets to smartphones.\u003C/p\u003E\n\u003Cp\u003EYour users who rely on assistive technology will benefit from a well-made website as the technology often relies on HTML parsing. Bad or broken \u003Cabbr title=\u0022HyperText Markup Language\u0022\u003EHTML\u003C/abbr\u003E is more likely to cause parsing problems for assistive technology and so increase the chance of users leaving your website.\u003C/p\u003E\n",
+    "wuhcag_tips": "",
+    "wuhcag_what_to_do": "\u003Cp\u003EThis is a wide-ranging guideline, one that changes with time as standards evolve. Your best protection is hiring a web designer who knows parsing well. Find one through recommendations and ask them about their approach to web standards and accessibility.\u003C/p\u003E\n\u003Cp\u003EHere are the most common issues to watch out for:\u003C/p\u003E\n\u003Cul\u003E\n \u003Cli\u003EEnsure HTML elements have complete start ( \u0026lt; \u003E ) and end ( \u0026lt;/ \u003E ) tags where needed.\u003C/li\u003E\n \u003Cli\u003ENest all HTML elements correctly (for example, list objects within an ordered or unordered list).\u003C/li\u003E\n \u003Cli\u003EUse unique Ids.\u003C/li\u003E\n \u003Cli\u003ECheck that HTML elements don\u2019t contain duplicate attributes.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": null,
+    "RelatedList": []
+  },
+  {
+    "Section": "4-1-2",
+    "id": "ensure-compat-rsv",
+    "title": "Name, Role, Value",
+    "description": "For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.",
+    "uri": "http://www.w3.org/TR/WCAG20/#ensure-compat-rsv",
+    "conformance_level": "A",
+    "wuhcag_summary": "Build all elements for accessibility",
+    "wuhcag_detail": "\u003Cp\u003EEverything that\u0027s on your website needs to work to defined standards. Where you\u0027re writing code that\u0027s not \u003Cabbr title=\u0022HyperText Markup Language\u0022\u003EHTML\u003C/abbr\u003E, it must conform to HTML-like standards. This means that it will work with various assistive technologies.\u003C/p\u003E\n\u003Cp\u003EThe key things to consider are advertising widgets, forms from third parties, things you\u2019ve coded yourself and anything that you add that you can\u2019t be sure how it was coded.\u003C/p\u003E\n",
+    "wuhcag_tips": "\u003Cul\u003E\n \u003Cli\u003EA good \u2013 though not foolproof \u2013 way to test your website is a HTML validator tool. A validator gives you an idea of how well technology can parse your website. Use it to create a list of priorities.\u003C/li\u003E\n \u003Cli\u003EThe majority of your potential issues will come from third-party code. \u003C/li\u003E\n \u003Cli\u003ESpeak to the developers of any plugins you use and make sure that they\u2019re writing good code.\u003C/li\u003E\n \u003Cli\u003EMake sure that everything on your website parses correctly.\u003C/li\u003E\n \u003Cli\u003EPay close attention to things like names and labels.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_what_to_do": "\u003Cul\u003E\n \u003Cli\u003EUse HTML specifications for any script you author for your website.\u003C/li\u003E\n \u003Cli\u003EIf you use a plugin or other element authored by a third party, make sure it uses valid HTML markup.\u003C/li\u003E\n\u003C/ul\u003E\n",
+    "wuhcag_exceptions": null,
+    "wuhcag_related": [
+      {
+        "Section": "1-1-1",
+        "conformance_level": "A"
+      },
+      {
+        "Section": "4-1-1",
+        "conformance_level": "A"
+      }
+    ],
+    "RelatedList": [
+      {
+        "Section": "\u00221-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      },
+      {
+        "Section": "\u00224-1-1\u0022",
+        "ConformanceLevel": "\u0022A\u0022"
+      }
+    ]
+  }
+]

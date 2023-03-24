@@ -23,7 +23,8 @@ public static class Program
                     }
                 });
 
-            context.SaveChanges();
+            var result =context.SaveChanges();
+            Console.WriteLine(result);
 
         }
 

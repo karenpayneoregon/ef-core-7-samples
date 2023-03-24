@@ -1,0 +1,35 @@
+﻿[
+  {
+    "ConformanceLevel": "\u0022A\u0022",
+    "Section": "\u00221-2-2\u0022"
+  },
+  {
+    "ConformanceLevel": "\u0022A\u0022",
+    "Section": "\u00221-2-3\u0022"
+  },
+  {
+    "ConformanceLevel": "\u0022AA\u0022",
+    "Section": "\u00221-2-5\u0022"
+  },
+  {
+    "ConformanceLevel": "\u0022AAA\u0022",
+    "Section": "\u00221-2-7\u0022"
+  },
+  {
+    "ConformanceLevel": "\u0022AAA\u0022",
+    "Section": "\u00221-2-8\u0022"
+  }
+]
+
+[
+  {
+    "City": "Wyndmoor",
+    "Company": "Company1",
+    "Street": "123 Apple St"
+  },
+  {
+    "City": "Portland",
+    "Company": "Company2",
+    "Street": "999 34th St"
+  }
+]

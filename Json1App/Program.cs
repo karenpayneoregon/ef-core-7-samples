@@ -1,9 +1,11 @@
-﻿using Json1App.Classes;
+﻿using System.Diagnostics.CodeAnalysis;
+using Json1App.Classes;
 using Json1App.Data;
 using Json1App.Models;
 
 namespace Json1App;
 
+[SuppressMessage("ReSharper", "ConvertTypeCheckToNullCheck")]
 internal partial class Program
 {
     static void Main(string[] args)
@@ -21,11 +23,15 @@ internal partial class Program
     {
         using var context = new Context();
         var person = context.Person.FirstOrDefault();
-        AnsiConsole.MarkupLine($"[white]{person.Id,-4}{person.FirstName, -10}{person.LastName, -10}{person.DateOfBirth:d}[/]");
-        foreach (var address in person.Addresses)
+        if (person is Person)
         {
-            AnsiConsole.MarkupLine($"\t[green]{address.Company,-10}{address.Street,-15}{address.City}[/]");
+            AnsiConsole.MarkupLine($"[white]{person.Id,-4}{person.FirstName,-10}{person.LastName,-10}{person.DateOfBirth:d}[/]");
+            foreach (var address in person.Addresses)
+            {
+                AnsiConsole.MarkupLine($"\t[green]{address.Company,-10}{address.Street,-15}{address.City}[/]");
+            }
         }
+
     }
 
     private static void AddOnePerson()

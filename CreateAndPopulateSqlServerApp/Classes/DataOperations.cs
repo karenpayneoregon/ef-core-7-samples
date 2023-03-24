@@ -21,8 +21,8 @@ namespace CreateAndPopulateSqlServerApp.Classes
             {
                 new () { ContactTitle = "Accounting Manager" },
                 new () { ContactTitle = "Owner" },
-                new () {ContactTitle = "Sales Agent" },
-                new () {ContactTitle = "Sales Manager" }
+                new () { ContactTitle = "Sales Agent" },
+                new () { ContactTitle = "Sales Manager" }
             };
 
             context.AddRange(contactTypes);
