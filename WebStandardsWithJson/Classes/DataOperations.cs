@@ -38,6 +38,20 @@ internal class DataOperations
         }
 
         var aaStandards = standards.Where(x => x.ConformanceLevel == "AA");
+
+        AnsiConsole.MarkupLine("[cyan]ConformanceLevel AA[/]");
         Console.WriteLine(aaStandards.Count());
+
+        AnsiConsole.MarkupLine("[cyan]Keyboard traps[/]");
+        var keyboardTraps = standards.FirstOrDefault(x => x.Title == "No Keyboard Trap");
+        Console.WriteLine(keyboardTraps.Description);
+        Console.WriteLine(keyboardTraps.Uri);
+
+        foreach (var related in keyboardTraps.RelatedList)
+        {
+            Console.WriteLine($"\t{related.Section,-10}{related.ConformanceLevel}");
+        }
+
+        Console.WriteLine();
     }
 }
