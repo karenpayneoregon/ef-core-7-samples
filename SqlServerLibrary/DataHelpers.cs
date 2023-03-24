@@ -18,7 +18,12 @@ public class DataHelpers
             .All(row => row.Field<int>("NumberOfRows") > 0);
 
     }
-        
+
+    /// <summary>
+    /// Determine the database has records
+    /// </summary>
+    /// <param name="databaseName">name of database</param>
+    /// <returns>true if all tables have records</returns>
     public static bool ExpressDatabaseExists(string databaseName)
     {
         using var cn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=master;integrated security=True;Encrypt=False");
@@ -28,6 +33,11 @@ public class DataHelpers
         return cmd.ExecuteScalar() != DBNull.Value;
 
     }
+    /// <summary>
+    /// Determine the database has records
+    /// </summary>
+    /// <param name="databaseName">name of database</param>
+    /// <returns>true if all tables have records</returns>
     public static bool LocalDbDatabaseExists(string databaseName)
     {
         using var cn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;integrated security=True;Encrypt=False");

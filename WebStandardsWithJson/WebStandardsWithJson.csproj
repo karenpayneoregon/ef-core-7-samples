@@ -50,4 +50,8 @@
 	  <Folder Include="Scripts\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\SqlServerLibrary\SqlServerLibrary.csproj" />
+	</ItemGroup>
+
 </Project>

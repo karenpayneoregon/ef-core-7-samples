@@ -1,5 +1,5 @@
 ﻿using WebStandardsWithJson.Classes;
-using WebStandardsWithJson.Models;
+using static SqlServerLibrary.DataHelpers;
 
 namespace WebStandardsWithJson;
 
@@ -7,10 +7,14 @@ internal partial class Program
 {
     static void Main(string[] args)
     {
+        var validate = LocalDbDatabaseExists("EF.Json");
+        if (validate == false)
+        {
+            DataOperations.AddRange(JsonOperations.Read());
+        }
 
-        //DataOperations.AddRange(JsonOperations.Read());
         DataOperations.Read();
-        AnsiConsole.MarkupLine("[yellow]Hello[/]");
+        AnsiConsole.MarkupLine("[yellow]Done[/]");
         Console.ReadLine();
     }
 }

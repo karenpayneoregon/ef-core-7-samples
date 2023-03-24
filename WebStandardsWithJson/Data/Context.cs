@@ -12,8 +12,7 @@ public partial class Context : DbContext
     {
     }
 
-    public Context(DbContextOptions<Context> options)
-        : base(options)
+    public Context(DbContextOptions<Context> options) : base(options)
     {
     }
 
@@ -28,9 +27,7 @@ public partial class Context : DbContext
         {
             entity.HasKey(e => e.Identifier);
         });
-
-
-
+        
         modelBuilder.Entity<WebStandards>().OwnsMany(
             ws => ws.RelatedList, ownedNavigationBuilder =>
             {
