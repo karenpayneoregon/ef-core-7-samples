@@ -12,10 +12,6 @@ public partial class Context : DbContext
     {
     }
 
-    public Context(DbContextOptions<Context> options) : base(options)
-    {
-    }
-
     public virtual DbSet<WebStandards> WebStandards { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

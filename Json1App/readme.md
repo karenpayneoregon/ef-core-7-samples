@@ -65,3 +65,4 @@ The code in `DataProviderOperations` shows how to get at the json data using `Mi
 
 - Microsoft docs [JSON Columns](https://devblogs.microsoft.com/dotnet/announcing-ef7-release-candidate-2/)
 - [EF Core 7 code sample](https://github.com/karenpayneoregon/ef-core-7-samples) (Karen Payne)
+

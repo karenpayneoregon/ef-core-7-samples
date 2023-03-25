@@ -11,6 +11,8 @@ internal class DataOperations
     public static void AddRange(List<WebStandards> list)
     {
         using var context = new Context();
+        context.Database.EnsureDeleted();
+        context.Database.EnsureCreated();
         context.AddRange(list);
         Console.WriteLine(context.SaveChanges());
     }

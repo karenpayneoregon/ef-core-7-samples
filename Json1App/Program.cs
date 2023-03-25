@@ -32,19 +32,35 @@ internal partial class Program
             }
         }
 
+        var firstPerson = context.Person.FirstOrDefault(x => x.Id == 1);
+        var portlandAddress = firstPerson!.Addresses.FirstOrDefault(x => x.City == "Portland");
+        AnsiConsole.MarkupLine($"[white]{firstPerson.LastName,-8}{portlandAddress!.Company}[/]");
+        
     }
 
     private static void AddOnePerson()
     {
         using var context = new Context();
+        
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
+
         Person person = new Person()
         {
             Addresses = new List<Address>()
             {
-                new Address() { Company = "Company1", City = "Wyndmoor", Street = "123 Apple St" },
-                new Address() { Company = "Company2", City = "Portland", Street = "999 34th St" },
+                new()
+                {
+                    Company = "Company1", 
+                    City = "Wyndmoor", 
+                    Street = "123 Apple St"
+                },
+                new()
+                {
+                    Company = "Company2", 
+                    City = "Portland", 
+                    Street = "999 34th St"
+                },
             },
             FirstName = "Karen",
             LastName = "Payne",
@@ -53,5 +69,13 @@ internal partial class Program
 
         context.Add(person);
         context.SaveChanges();
+
+        context.Person.FirstOrDefault()!
+            .Addresses
+            .FirstOrDefault()
+            !.City = "Ambler";
+
+        context.SaveChanges();
+
     }
 }

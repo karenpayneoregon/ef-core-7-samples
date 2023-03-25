@@ -29,7 +29,7 @@ internal class DataProviderOperations
         }
 
         Console.WriteLine();
-        AnsiConsole.MarkupLine($"[cyan]DataTable columns[/]");
+        AnsiConsole.MarkupLine("[cyan]DataTable columns[/]");
         foreach (DataColumn column in dt.Columns)
         {
             Console.WriteLine($"{column.ColumnName,-15}{column.DataType.Name}");
