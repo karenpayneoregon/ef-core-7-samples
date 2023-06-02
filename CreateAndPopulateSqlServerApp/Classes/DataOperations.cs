@@ -1,9 +1,4 @@
 ﻿using CreateAndPopulateSqlServerApp.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CreateAndPopulateSqlServerApp.Models;
 using EntityFrameworkCoreHelpers;
 using Microsoft.EntityFrameworkCore;
