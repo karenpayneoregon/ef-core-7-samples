@@ -4,21 +4,6 @@ using SortByColumnNameApp.Models;
 namespace SortByColumnNameApp.Classes;
 
 /// <summary>
-/// Specifies the sort direction against a property
-/// </summary>
-public enum Direction
-{
-    /// <summary>
-    /// Sort ascending.
-    /// </summary>
-    Ascending,
-    /// <summary>
-    /// Sort descending.
-    /// </summary>
-    Descending
-}
-
-/// <summary>
 /// Various methods for dynamic ordering
 /// Pick what you like and when doing so consider maintenance as when using Expression for instance
 /// may break in future releases.
@@ -49,7 +34,7 @@ public static class OrderingHelpers
     }
 
     /// <summary>
-    /// Provides sorting by <see cref="PropertyAlias"/> using a key specified in <see cref="key"/> and if the key is not found the default is <see cref="Customers.CompanyName"/>
+    /// Provides sorting by <see cref="PropertyName"/> using a key specified in <see cref="key"/> and if the key is not found the default is <see cref="Customers.CompanyName"/>
     /// <para>By default the sort order is <see cref="Direction.Ascending"/></para> 
     /// </summary>
     /// <param name="query"><see cref="Customers"/> query</param>
@@ -57,14 +42,17 @@ public static class OrderingHelpers
     /// <param name="direction">direction to sort by</param>
     /// <returns>query with order by</returns>
     /// <remarks>A little better than <see cref="OrderByString"/> but can still break if the model changes</remarks>
-    public static IQueryable<Customers> OrderByEnum(this IQueryable<Customers> query, PropertyAlias key, Direction direction = Direction.Ascending)
+    public static IQueryable<Customers> OrderByEnum(
+        this IQueryable<Customers> query, 
+        PropertyName key, Direction 
+            direction = Direction.Ascending)
     {
         Expression<Func<Customers, object>> exp = key switch
         {
-            PropertyAlias.LastName => customer => customer.Contact.LastName,
-            PropertyAlias.FirstName => customer => customer.Contact.FirstName,
-            PropertyAlias.CountryName => customer => customer.CountryNavigation.Name,
-            PropertyAlias.Title => customer => customer.ContactTypeNavigation.ContactTitle,
+            PropertyName.LastName => customer => customer.Contact.LastName,
+            PropertyName.FirstName => customer => customer.Contact.FirstName,
+            PropertyName.CountryName => customer => customer.CountryNavigation.Name,
+            PropertyName.Title => customer => customer.ContactTypeNavigation.ContactTitle,
             _ => customer => customer.CompanyName
         };
 
@@ -170,4 +158,31 @@ public static class OrderingHelpers
         return (IOrderedQueryable<T>)query.Provider.CreateQuery<T>(orderByCall);
 
     }
+    
+}
+
+public class OrderColumn
+{
+    /// <summary>
+    /// Property name for ordering
+    /// </summary>
+    public PropertyName PropertyName { get; set; }
+    /// <summary>
+    /// Column name to use for ordering which can contain a dot for navigations
+    /// </summary>
+    public string Column { get; set; }
+    public override string ToString() => PropertyName.ToString();
+
+}
+
+public class OrderColumns
+{
+    public static List<OrderColumn> List() =>
+        new()
+        {
+            new OrderColumn() { PropertyName = PropertyName.FirstName, Column = "Contact.FirstName" },
+            new OrderColumn() { PropertyName = PropertyName.LastName, Column = "Contact.LastName" },
+            new OrderColumn() { PropertyName = PropertyName.Title, Column = "ContactTypeNavigation.ContactTitle" },
+            new OrderColumn() { PropertyName = PropertyName.CountryName, Column = "CountryNavigation.Name" }
+        };
 }

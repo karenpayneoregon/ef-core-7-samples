@@ -1,4 +1,6 @@
-﻿using SortByColumnNameApp.Data;
+﻿using System.Collections;
+using SortByColumnNameApp.Data;
+using SortByColumnNameApp.Models;
 
 namespace SortByColumnNameApp.Classes;
 
@@ -37,12 +39,19 @@ internal class GetOperations
         using var context = new NorthWindContext();
         var details = context.GetNavigationDetails();
 
-        foreach (var detail in details)
+        foreach (Details detail in details)
         {
+            
             Console.WriteLine(detail.Name);
+            
             foreach (var info in detail.NavigationProperties)
             {
-                Console.WriteLine($"   {info.Name}");
+                Console.WriteLine($"   {info.Name,-20}");
+                foreach (var property in detail.NavigationProperties)
+                {
+                    Console.WriteLine($"        {property.Name}  {property.PropertyType.Name}");
+                    
+                }
             }
         }
     }

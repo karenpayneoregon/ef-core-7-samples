@@ -20,10 +20,62 @@ internal class DataOperations
         using var context = new NorthWindContext();
 
         var customers = context.Customers
+            
             .Include(c => c.Contact)
             .Include(c => c.ContactTypeNavigation)
             .OrderBy(c => c.ContactTypeNavigation.ContactTitle)
             .ToList();
+    }
+    public static async Task<List<Customers>> OrderByOnNavigation(OrderColumn ordering, Direction direction)
+    {
+        await using var context = new NorthWindContext();
+
+        if (direction == Direction.Ascending)
+        {
+            return await context.Customers
+                .Include(c => c.CountryNavigation)
+                .Include(c => c.Contact)
+                .Include(c => c.ContactTypeNavigation)
+                .OrderByColumn(ordering.Column)
+                .ToListAsync();
+        }
+        else
+        {
+            return await context.Customers
+                .Include(c => c.CountryNavigation)
+                .Include(c => c.Contact)
+                .Include(c => c.ContactTypeNavigation)
+                .OrderByColumnDescending(ordering.Column)
+                .ToListAsync();
+        }
+
+    }
+
+    /// <summary>
+    /// Order by using an enum
+    /// </summary>
+    public static async Task SortCustomerOnContactTitle()
+    {
+        await using var context = new NorthWindContext();
+
+        List<Customers> customers = await context.Customers
+            .Include(c => c.Contact)
+            .Include(c => c.ContactTypeNavigation)
+            .OrderByEnum(PropertyName.Title, Direction.Descending)
+            .ToListAsync();
+
+        var table = CreateTableForContactTitle();
+
+        for (int index = 0; index < Count; index++)
+        {
+            table.AddRow(
+                customers[index].CompanyName, 
+                customers[index].ContactTypeNavigation.ContactTitle, 
+                customers[index].Contact.LastName);
+        }
+
+        AnsiConsole.Write(table);
+
     }
 
     /// <summary>
@@ -63,7 +115,7 @@ internal class DataOperations
 
         List<Customers> customers = await context.Customers
             .Include(c => c.CountryNavigation)
-            .OrderByEnum(PropertyAlias.CountryName, Direction.Ascending)
+            .OrderByEnum(PropertyName.CountryName, Direction.Ascending)
             .ToListAsync();
 
 
@@ -107,7 +159,7 @@ internal class DataOperations
 
         List<Customers> customers = await context.Customers
             .Include(c => c.Contact)
-            .OrderByEnum(PropertyAlias.LastName, Direction.Descending)
+            .OrderByEnum(PropertyName.LastName, Direction.Descending)
             .ToListAsync();
 
         var table = CreateTableForContacts();
@@ -121,32 +173,6 @@ internal class DataOperations
 
     }
 
-    /// <summary>
-    /// Order by using an enum
-    /// </summary>
-    public static async Task SortCustomerOnContactTitle()
-    {
-        await using var context = new NorthWindContext();
-
-        List<Customers> customers = await context.Customers
-            .Include(c => c.Contact)
-            .Include(c => c.ContactTypeNavigation)
-            .OrderByEnum(PropertyAlias.Title, Direction.Descending)
-            .ToListAsync();
-
-        var table = CreateTableForContactTitle();
-
-        for (int index = 0; index < Count; index++)
-        {
-            table.AddRow(
-                customers[index].CompanyName, 
-                customers[index].ContactTypeNavigation.ContactTitle, 
-                customers[index].Contact.LastName);
-        }
-
-        AnsiConsole.Write(table);
-
-    }
     #region Screen helpers
 
     private static Table CreateTableForCountries()

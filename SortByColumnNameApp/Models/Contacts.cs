@@ -16,4 +16,6 @@ public partial class Contacts
     public int? ContactTypeIdentifier { get; set; }
     public virtual ContactType ContactTypeNavigation { get; set; }
     public virtual ICollection<Customers> Customers { get; set; }
+    public override string ToString() => $"{FirstName} {LastName}";
+
 }

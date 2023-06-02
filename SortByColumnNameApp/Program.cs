@@ -1,4 +1,5 @@
 ﻿using SortByColumnNameApp.Classes;
+using SortByColumnNameApp.Models;
 using SqlServerLibrary;
 
 
@@ -27,6 +28,10 @@ internal partial class Program
         await DataOperations.SortCustomerOnContactTitle();
         DataOperations.ConventionalOrderByOnNavigation();
 
+        var ordering = OrderColumns.List().FirstOrDefault(o => o.PropertyName == PropertyName.Title);
+        var data = await DataOperations.OrderByOnNavigation(ordering, Direction.Descending);
+ 
+        //GetOperations.NavigationDetails();
         ExitPrompt();
     }
 

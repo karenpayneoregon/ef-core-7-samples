@@ -13,5 +13,7 @@ public partial class Countries
     public string Name { get; set; }
 
     public virtual ICollection<Customers> Customers { get; set; }
+    public override string ToString() => Name;
+
 
 }

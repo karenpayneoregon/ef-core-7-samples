@@ -13,5 +13,7 @@ public partial class Customers
     public virtual Contacts Contact { get; set; }
     public virtual ContactType ContactTypeNavigation { get; set; }
     public virtual Countries CountryNavigation { get; set; }
+    public override string ToString() => CompanyName;
+
 
 }
