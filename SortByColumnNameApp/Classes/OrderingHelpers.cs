@@ -18,14 +18,6 @@ public enum Direction
     Descending
 }
 
-public enum PropertyAlias
-{
-    FirstName,
-    LastName,
-    CountryName,
-    Title
-}
-
 /// <summary>
 /// Various methods for dynamic ordering
 /// Pick what you like and when doing so consider maintenance as when using Expression for instance

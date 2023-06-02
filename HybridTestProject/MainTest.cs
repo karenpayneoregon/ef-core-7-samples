@@ -13,7 +13,7 @@ namespace HybridTestProject
     {
         [TestMethod]
         [Ignore]
-        [TestTraits(Trait.PlaceHolder)]
+        [TestTraits(Trait.EntityFrameworkCore)]
         public void AddRecordsTest()
         {
             using var context = new Context();
@@ -62,7 +62,7 @@ namespace HybridTestProject
 
         }
         [TestMethod]
-        [TestTraits(Trait.PlaceHolder)]
+        [TestTraits(Trait.EntityFrameworkCore)]
         public void SimpleReadTest()
         {
             using var context = new Context();
@@ -76,11 +76,14 @@ namespace HybridTestProject
         }
 
         [TestMethod]
-        [TestTraits(Trait.PlaceHolder)]
+        [TestTraits(Trait.EntityFrameworkCore)]
         public void ReadOneTest()
         {
             using var context = new Context();
-            var app = context.Applications.FirstOrDefault(x => x.MailSettings.FromAddress == "FromAddressSides");
+            
+            var app = context.Applications.FirstOrDefault(x => 
+                x.MailSettings.FromAddress == "FromAddressSides");
+
             Assert.IsNotNull(app);
 
         }

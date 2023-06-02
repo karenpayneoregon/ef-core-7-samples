@@ -14,6 +14,8 @@ internal partial class Program
 
         using var context = new Context();
 
+        var provider = context.Provider();
+
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
 

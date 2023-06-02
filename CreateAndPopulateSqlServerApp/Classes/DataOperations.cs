@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CreateAndPopulateSqlServerApp.Models;
+using EntityFrameworkCoreHelpers;
 using Microsoft.EntityFrameworkCore;
 
 namespace CreateAndPopulateSqlServerApp.Classes
@@ -43,6 +44,7 @@ namespace CreateAndPopulateSqlServerApp.Classes
         public static void Read()
         {
             using var context = new Context();
+            var test = context.Provider();
             var owners = context.Contacts
                 .Include(c => c.ContactTypeNavigation)
                 .Where(x => x.ContactTypeIdentifier.Value == 2)

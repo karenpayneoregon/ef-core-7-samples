@@ -117,7 +117,9 @@ public static class EntityExtensions
         var list = new List<string>();
 
         IEnumerable<IProperty> properties = 
-            context.Model.FindEntityType(entityType ?? throw new InvalidOperationException())!.GetProperties();
+            context.Model.FindEntityType(entityType ?? 
+                                         throw new InvalidOperationException())
+                !.GetProperties();
 
 
         foreach (IProperty itemProperty in properties)
