@@ -21,9 +21,9 @@ public class IndexModel : PageModel
 
     public async Task OnGetAsync()
     {
-        if (_context.Contacts1 != null)
+        if (_context.Contacts != null)
         {
-            Contacts = await _context.Contacts1.ToListAsync();
+            Contacts = await _context.Contacts.ToListAsync();
 
             await GetDeletedRecordCount();
         }

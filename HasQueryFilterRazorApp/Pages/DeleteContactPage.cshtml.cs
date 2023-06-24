@@ -19,12 +19,12 @@ public class DeleteContactPageModel : PageModel
 
     public async Task<IActionResult> OnGetAsync(int? id)
     {
-        if (id == null || _context.Contacts1 == null)
+        if (id == null || _context.Contacts == null)
         {
             return NotFound();
         }
 
-        var contact = await _context.Contacts1.FirstOrDefaultAsync(m => m.ContactId == id);
+        var contact = await _context.Contacts.FirstOrDefaultAsync(m => m.ContactId == id);
 
         if (contact == null)
         {
@@ -39,16 +39,16 @@ public class DeleteContactPageModel : PageModel
 
     public async Task<IActionResult> OnPostAsync(int? id)
     {
-        if (id == null || _context.Contacts1 == null)
+        if (id == null || _context.Contacts == null)
         {
             return NotFound();
         }
-        var contact = await _context.Contacts1.FindAsync(id);
+        var contact = await _context.Contacts.FindAsync(id);
 
         if (contact != null)
         {
             Contact = contact;
-            _context.Contacts1.Remove(Contact);
+            _context.Contacts.Remove(Contact);
             await _context.SaveChangesAsync();
         }
 

@@ -26,7 +26,7 @@ public partial class ShadowContext : DbContext
     {
     }
 
-    public virtual DbSet<Contact> Contacts1 { get; set; }
+    public virtual DbSet<Contact> Contacts { get; set; }
 
     //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     //    => optionsBuilder.UseSqlServer(
