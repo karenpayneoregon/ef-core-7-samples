@@ -6,17 +6,6 @@ namespace ShadowProperties.Data;
 
 public partial class ShadowContext : DbContext
 {
-    //private bool _showDeleted;
-
-    //public ShadowContext(bool showDeleted)
-    //{
-    //    _showDeleted = showDeleted;
-    //}
-    //public ShadowContext()
-    //{
-    //    _showDeleted = false;
-    //}
-
     public ShadowContext()
     {
         
@@ -53,7 +42,7 @@ public partial class ShadowContext : DbContext
             .HasQueryFilter(contact =>
                 EF.Property<bool>(contact, "isDeleted") == false);
 
-        OnModelCreatingPartial(modelBuilder);
+        //OnModelCreatingPartial(modelBuilder);
 
     }
 
