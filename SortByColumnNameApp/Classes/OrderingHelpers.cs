@@ -42,9 +42,7 @@ public static class OrderingHelpers
     /// <param name="direction">direction to sort by</param>
     /// <returns>query with order by</returns>
     /// <remarks>A little better than <see cref="OrderByString"/> but can still break if the model changes</remarks>
-    public static IQueryable<Customers> OrderByEnum(
-        this IQueryable<Customers> query, 
-        PropertyName key, Direction 
+    public static IQueryable<Customers> OrderByEnum(this IQueryable<Customers> query, PropertyName key, Direction 
             direction = Direction.Ascending)
     {
         Expression<Func<Customers, object>> exp = key switch

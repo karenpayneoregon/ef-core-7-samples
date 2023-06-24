@@ -7,7 +7,7 @@ namespace CreateAndPopulateSqlServerApp
     {
         static void Main(string[] args)
         {
-            //DataOperations.CreateInitialData();
+            DataOperations.CreateInitialData();
             DataOperations.Read();
             AnsiConsole.MarkupLine("[yellow]Done[/]");
             Console.ReadLine();

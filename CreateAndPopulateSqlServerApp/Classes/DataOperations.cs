@@ -1,4 +1,5 @@
-﻿using CreateAndPopulateSqlServerApp.Data;
+﻿using System.Security.Cryptography.X509Certificates;
+using CreateAndPopulateSqlServerApp.Data;
 using CreateAndPopulateSqlServerApp.Models;
 using EntityFrameworkCoreHelpers;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +23,7 @@ namespace CreateAndPopulateSqlServerApp.Classes
             };
 
             context.AddRange(contactTypes);
-            context.SaveChanges();
+            Console.WriteLine(context.SaveChanges());
 
             List<Contacts> contacts = new List<Contacts>
             {
@@ -33,7 +34,19 @@ namespace CreateAndPopulateSqlServerApp.Classes
             };
 
             context.AddRange(contacts);
-            context.SaveChanges();
+            Console.WriteLine(context.SaveChanges());
+            //contacts.First(c => c.ContactId == 2).FirstName = "Anne";
+            
+            var contact = context.Contacts
+                .Include(c => c.ContactTypeNavigation)
+                .FirstOrDefault(c => c.ContactId == 2);
+
+            if (contact is not null)
+            {
+                contact.FirstName = "Kim";
+                Console.WriteLine(context.SaveChanges());
+            }
+
         }
 
         public static void Read()

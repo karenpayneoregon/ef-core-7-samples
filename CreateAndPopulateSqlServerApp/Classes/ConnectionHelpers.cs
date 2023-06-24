@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using ConfigurationLibrary.Classes;
+using CreateAndPopulateSqlServerApp.Interceptors;
 using Microsoft.EntityFrameworkCore;
 
 namespace CreateAndPopulateSqlServerApp.Classes;
@@ -11,6 +12,7 @@ public class ConnectionHelpers
         optionsBuilder
             .UseSqlServer(ConfigurationHelper.ConnectionString())
             .EnableSensitiveDataLogging()
+            .AddInterceptors(new AuditInterceptor())
             .LogTo(message => Debug.WriteLine(message));
 
     }

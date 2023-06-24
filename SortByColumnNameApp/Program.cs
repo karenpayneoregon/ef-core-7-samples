@@ -15,6 +15,8 @@ internal partial class Program
         //Setup.CleanDatabase();
         //Setup.Populate();
 
+        ModelInformation();
+
         if (!DataHelpers.LocalDbDatabaseExists("NorthWind2022Short"))
         {
             AnsiConsole.MarkupLine("[white on red]Database does not exists[/]");
@@ -30,8 +32,9 @@ internal partial class Program
 
         var ordering = OrderColumns.List().FirstOrDefault(o => o.PropertyName == PropertyName.Title);
         var data = await DataOperations.OrderByOnNavigation(ordering, Direction.Descending);
- 
+
         //GetOperations.NavigationDetails();
+        ModelInformation();
         ExitPrompt();
     }
 
@@ -39,6 +42,6 @@ internal partial class Program
     {
         var modelNames = GetOperations.GetDatabaseModels();
         GetOperations.GetProperties(modelNames);
-        GetOperations.NavigationDetails();
+        //GetOperations.NavigationDetails();
     }
 }
