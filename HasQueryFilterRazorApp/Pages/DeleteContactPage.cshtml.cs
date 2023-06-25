@@ -34,7 +34,9 @@ public class DeleteContactPageModel : PageModel
         {
             Contact = contact;
         }
+
         return Page();
+
     }
 
     public async Task<IActionResult> OnPostAsync(int? id)

@@ -1,5 +1,4 @@
-﻿using EntityFrameworkCoreHelpers.Classes;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using ShadowProperties.Models;
 
 namespace ShadowProperties.Data;
@@ -17,6 +16,7 @@ public partial class ShadowContext : DbContext
 
     public virtual DbSet<Contact> Contacts { get; set; }
 
+    // un-comment to scaffold a page
     //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     //    => optionsBuilder.UseSqlServer(
     //        """
@@ -41,8 +41,6 @@ public partial class ShadowContext : DbContext
         modelBuilder.Entity<Contact>()
             .HasQueryFilter(contact =>
                 EF.Property<bool>(contact, "isDeleted") == false);
-
-        //OnModelCreatingPartial(modelBuilder);
 
     }
 
