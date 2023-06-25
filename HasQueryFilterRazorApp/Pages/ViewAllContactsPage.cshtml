@@ -5,12 +5,12 @@
     ViewData["Title"] = "View and change delete";
 }
 
-<h1 class="fs-4 mb-3">View All</h1>
+<h1 class="fs-3 mb-3 bg-light p-2 border">View All</h1>
 
 <form method="post">
     <table class="table table-bordered shadow">
         <thead>
-            <tr>
+            <tr class="bg-light">
                 <th>
                     @Html.DisplayNameFor(model => model.Contacts[0].FirstName)
                 </th>
@@ -38,7 +38,7 @@
                         @Model.Contacts[index].LastName
                     </td>
                     <td>
-                        <input asp-for="@Model.Contacts[index].isDeleted" />
+                        <input id="d@index" asp-for="@Model.Contacts[index].isDeleted" aria-label="delete status" />
                     </td>
                 </tr>
             }

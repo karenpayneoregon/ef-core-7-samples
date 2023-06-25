@@ -50,7 +50,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStandardsWithJson", "Web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShadowProperties", "ShadowProperties\ShadowProperties.csproj", "{7D75A3D8-425C-4C21-B8C0-82F1EE3D64EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HasQueryFilterRazorApp", "HasQueryFilterRazorApp\HasQueryFilterRazorApp.csproj", "{4526D4C7-61C9-497D-9B09-17FAF51BBF8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HasQueryFilterRazorApp", "HasQueryFilterRazorApp\HasQueryFilterRazorApp.csproj", "{4526D4C7-61C9-497D-9B09-17FAF51BBF8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,19 +9,11 @@ public partial class ShadowContext : DbContext
     {
         
     }
-    public ShadowContext(DbContextOptions<ShadowContext> options)
-        : base(options)
+    public ShadowContext(DbContextOptions<ShadowContext> options) : base(options)
     {
     }
 
     public virtual DbSet<Contact> Contacts { get; set; }
-
-    // un-comment to scaffold a page
-    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    //    => optionsBuilder.UseSqlServer(
-    //        """
-    //           Server=(localdb)\\mssqllocaldb;Database=EF.ShadowEntityCore;Trusted_Connection=True
-    //           """);
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -46,39 +38,17 @@ public partial class ShadowContext : DbContext
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new ())
     {
-        DoShadowyStuff();
+        HandleChanges();
         return base.SaveChangesAsync(cancellationToken);
     }
 
     public override int SaveChanges()
     {
-        DoShadowyStuff();
+        HandleChanges();
         return base.SaveChanges();
     }
 
-    private void DoShadowyStuff()
-    {
-        foreach (var entry in ChangeTracker.Entries())
-        {
-            if (entry.State is EntityState.Added or EntityState.Modified)
-            {
-                entry.Property("LastUpdated").CurrentValue = DateTime.Now;
-                entry.Property("LastUser").CurrentValue = Environment.UserName;
 
-                if (entry.Entity is Contact && entry.State == EntityState.Added)
-                {
-                    entry.Property("CreatedAt").CurrentValue = DateTime.Now;
-                    entry.Property("CreatedBy").CurrentValue = Environment.UserName;
-                }
-            }
-            else if (entry.State == EntityState.Deleted)
-            {
-                // Change state to modified and set delete flag
-                entry.State = EntityState.Modified;
-                entry.Property("isDeleted").CurrentValue = true;
-            }
-        }
-    }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

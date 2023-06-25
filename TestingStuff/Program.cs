@@ -22,7 +22,7 @@ internal partial class Program
         //var test = EntityHelpers.NavigationsForModelSimple<Customers>();
         //Generic1();
 
-        http://google.com
+        //http://google.com
 
         //(var firstName, var lastName) = ("Karen", "Payne"); 
         //var fullName = (firstName, lastName).Concatenate(); 
