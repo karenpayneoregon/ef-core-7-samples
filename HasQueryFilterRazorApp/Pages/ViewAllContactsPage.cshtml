@@ -1,0 +1,51 @@
+﻿@page
+@model HasQueryFilterRazorApp.Pages.ViewAllContactsPageModel
+
+@{
+    ViewData["Title"] = "View and change delete";
+}
+
+<h1 class="fs-4 mb-3">View All</h1>
+
+<form method="post">
+    <table class="table table-bordered shadow">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contacts[0].FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contacts[0].LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contacts[0].isDeleted)
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @for (int index = 0; index < Model.Contacts.Count; index++)
+            {
+                <tr>
+
+                    <input type="hidden" asp-for="Contacts[index].ContactId" />
+
+                    <td>
+                        @Model.Contacts[index].FirstName
+                    </td>
+                    <td>
+                        @Model.Contacts[index].LastName
+                    </td>
+                    <td>
+                        <input asp-for="@Model.Contacts[index].isDeleted" />
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>

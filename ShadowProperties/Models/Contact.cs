@@ -60,6 +60,7 @@ namespace ShadowProperties.Models
         }
 
         [NotMapped]
+        [Display(Name = "Deleted")]
         public bool isDeleted { get; set; }
         public override string ToString() => $"{FirstName} {LastName}";
 

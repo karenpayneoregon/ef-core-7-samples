@@ -5,30 +5,19 @@
     ViewData["Title"] = "Delete contact";
 }
 
-<h1>DeleteContactPage</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h1 class="fs-3">Are you sure you want to delete?</h1>
 <div>
-    <h4>Contact</h4>
+    
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Contact.FirstName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Contact.FirstName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Contact.LastName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Contact.LastName)
-        </dd>
-    </dl>
+    <div class="mb-2">
+        <span class="fw-bold">Contact</span>
+        @Html.DisplayFor(model => model.Contact.FirstName) @Html.DisplayFor(model => model.Contact.LastName)
+    </div>
     
     <form method="post">
         <input type="hidden" asp-for="Contact.ContactId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-page="./Index">Back to List</a>
+        <input type="submit" value="Delete" class="btn btn-danger" style="width: 8em"/> |
+        <a asp-page="./Index" class="btn btn-primary" style="width: 8em">Back to List</a>
     </form>
 </div>

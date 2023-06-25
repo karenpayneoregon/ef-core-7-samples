@@ -1,3 +1,4 @@
+using HasQueryFilterRazorApp.Classes;
 using Microsoft.EntityFrameworkCore;
 using ShadowProperties.Data;
 
@@ -13,6 +14,8 @@ public class Program
         builder.Services.AddRazorPages();
         builder.Services.AddDbContextPool<ShadowContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+        SetupLogging.Development();
 
         var app = builder.Build();
 
