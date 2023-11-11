@@ -20,7 +20,7 @@ internal partial class Program
         AnsiConsole.MarkupLine("[yellow]Hello[/]");
 
         //var test = EntityHelpers.NavigationsForModelSimple<Customers>();
-        //Generic1();
+        Generic1();
 
         //http://google.com
 
@@ -32,8 +32,8 @@ internal partial class Program
         //Generic1();
         
         //await IsLoaded();
-        Karen1();
-        //using var context = new Context();
+        //Karen1();
+        using var context = new Context();
 
         //var contact = context.Contacts
         //    //.Include(c => c.ContactTypeNavigation)
@@ -47,7 +47,7 @@ internal partial class Program
         //                  $"{contact.ContactDevices.First().PhoneTypeNavigation.PhoneTypeDescription}");
         
         //EntityHelpers.Get<Contacts,Context>(context.Database.GetConnectionString());
-        //var oneToManyRelations = context.Model.GetNavigationProperties<Contacts>(RelationshipMultiplicity.Many);
+        //var oneToManyRelations = context.Model.GetNavigationProperties<Contacts>(RelationshipMultiplicity.Many).ToList();
         
         //context.Model.GetNavigationProperties<Customers>();
         Console.ReadLine();
@@ -144,9 +144,14 @@ internal partial class Program
     private static void Generic1()
     {
         using var context = new Context();
+        var cat = new Categories();
+        //ModelExtensions.GetNavigationProperties<Categories>();
+        
         //var customers = context.Customers.Include(x => x.Contact).ToList();
-        var customers = context.Customers.Include(x => x.Contact).ToList();
-        var items = EntityHelpers.NavigationInformationForModel<Customers, Context>();
+        var customers = context.Customers
+            .Include(x => x.CountryIdentifierNavigation)
+            .ToList();
+        var items = EntityHelpers.NavigationInformationForModel<Employees, Context>();
 
         //Console.WriteLine("Customers");
         //var props = context.GetModelProperties(items.FirstOrDefault(x => x.Name == "Customers")!.Name);

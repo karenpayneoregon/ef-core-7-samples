@@ -9,6 +9,7 @@
 
 <form method="post">
     <table class="table table-bordered shadow">
+        <caption>List of all contacts with ability to change delete status</caption>
         <thead>
             <tr class="bg-light">
                 <th>
@@ -38,7 +39,10 @@
                         @Model.Contacts[index].LastName
                     </td>
                     <td>
-                        <input id="d@index" asp-for="@Model.Contacts[index].isDeleted" aria-label="delete status" />
+                        @* to pass accessibility we need aria-label *@
+                        <input id="d@index"
+                           asp-for="@Model.Contacts[index].isDeleted"
+                           aria-label="change delete status" />
                     </td>
                 </tr>
             }

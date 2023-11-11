@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ShadowProperties.Interfaces;
 using ShadowProperties.Models;
 
 // ReSharper disable once CheckNamespace
@@ -23,7 +24,7 @@ public partial class ShadowContext
                 entry.Property("LastUpdated").CurrentValue = DateTime.Now;
                 entry.Property("LastUser").CurrentValue = Environment.UserName;
 
-                if (entry.Entity is Contact && entry.State == EntityState.Added)
+                if (entry.Entity is IShadows && entry.State == EntityState.Added)
                 {
                     entry.Property("CreatedAt").CurrentValue = DateTime.Now;
                     entry.Property("CreatedBy").CurrentValue = Environment.UserName;

@@ -15,6 +15,7 @@ public class Program
         builder.Services.AddDbContextPool<ShadowContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+        builder.Services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
         SetupLogging.Development();
 
         var app = builder.Build();

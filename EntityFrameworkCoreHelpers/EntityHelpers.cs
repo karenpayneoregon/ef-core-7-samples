@@ -2,8 +2,6 @@
 using EntityFrameworkCoreHelpers.Interfaces;
 using EntityFrameworkCoreHelpers.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace EntityFrameworkCoreHelpers;
@@ -11,8 +9,7 @@ public class EntityHelpers
 {
     public static List<NavigationItem> NavigationInformationForModel<TEntity, TContext>()
         where TContext : DbContext
-        where TEntity : class,
-        IBaseEntity
+        where TEntity : class //, IBaseEntity
     {
         
         var type = typeof(DbContextOptionsBuilder<>).MakeGenericType(typeof(TContext));

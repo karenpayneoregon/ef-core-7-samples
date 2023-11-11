@@ -10,6 +10,7 @@
 
 <table class="table table-bordered shadow">
     <thead>
+        <caption>Read only list of contacts</caption>
         <tr class="bg-light">
             <th>
                 @Html.DisplayNameFor(model => model.Reports[0].ContactId)
@@ -71,7 +72,7 @@
                     {
                         @Model.Reports[index].Deleted
                     }
-                    
+
                 </td>
             </tr>
         }

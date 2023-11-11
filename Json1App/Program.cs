@@ -11,7 +11,7 @@ internal partial class Program
     static void Main(string[] args)
     {
         
-        AddOnePerson();
+        //AddOnePerson();
         ReadOnePerson();
         Console.WriteLine();
         DataProviderOperations.ReadPersonAddress(1);

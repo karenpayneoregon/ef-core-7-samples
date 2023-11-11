@@ -1,10 +1,11 @@
 ﻿using System.Data;
+using HasQueryFilterRazorApp.Classes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using Serilog;
 using ShadowProperties.Models;
+#pragma warning disable CA1416
 
 namespace HasQueryFilterRazorApp.Pages;
 public class IndexModel : PageModel
@@ -21,19 +22,23 @@ public class IndexModel : PageModel
     [BindProperty]
     public int IgnoreCount { get; set; }
 
+    [BindProperty]
+    public int Identifier { get; set; }
+
     public async Task OnGetAsync()
     {
-        
+
+        ViewData["Title"] = $"Current user {Helpers.GetUserName()}";
+
         if (_context.Contacts != null)
         {
             Contacts = await _context.Contacts.ToListAsync();
 
             await GetDeletedRecordCount();
         }
+
     }
-    /// <summary>
-    /// Since isDeleted is not part of the model
-    /// </summary>
+    
     private async Task GetDeletedRecordCount()
     {
         await using var cn = new SqlConnection(_context.Database.GetConnectionString());

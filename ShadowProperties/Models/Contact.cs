@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using ShadowProperties.Interfaces;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.CompilerServices;
@@ -7,15 +8,11 @@ using System.Runtime.CompilerServices;
 namespace ShadowProperties.Models;
 
 [Table("Contact1")]
-public partial class Contact : INotifyPropertyChanged
+public partial class Contact : INotifyPropertyChanged, IShadows
 {
     private int _contactId;
     private string _firstName;
     private string _lastName;
-    //private DateTime? _lastUpdated;
-    //private string _lastUser;
-    //private DateTime? _createdAt;
-    //private string _createdBy;
 
     [Display(Name = "Id")]
     public int ContactId
