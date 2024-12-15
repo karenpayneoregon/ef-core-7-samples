@@ -18,7 +18,7 @@ public partial class Context : DbContext
         => optionsBuilder.UseSqlServer(
             """
                 Data Source=(localdb)\MSSQLLocalDB;
-                Initial Catalog=EF.Json;
+                Initial Catalog=EF.Json1;
                 Integrated Security=True
                """);
 
