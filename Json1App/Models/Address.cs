@@ -2,8 +2,8 @@
 
 public class Address
 {
-    public string Company { get; set; }
+    public string AddressType { get; set; }
     public string Street { get; set; }
     public string City { get; set; }
-    public override string ToString() => Company;
+    public override string ToString() => AddressType;
 }

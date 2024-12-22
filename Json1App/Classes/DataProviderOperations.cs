@@ -13,7 +13,7 @@ internal class DataProviderOperations
         AnsiConsole.MarkupLine($"[cyan]Read data for address {index +1}[/]");
         var statement =
             "SELECT Id, FirstName, LastName, DateOfBirth, " + 
-            $"JSON_VALUE(Addresses, '$[{index}].Street') AS Street, JSON_VALUE(Addresses, '$[{index}].City') AS City, JSON_VALUE(Addresses, '$[{index}].Company') AS Company FROM dbo.Person;";
+            $"JSON_VALUE(Addresses, '$[{index}].Street') AS Street, JSON_VALUE(Addresses, '$[{index}].City') AS City, JSON_VALUE(Addresses, '$[{index}].AddressType') AS AddressType FROM dbo.Person;";
 
         using SqlConnection cn = new(ConfigurationHelper.ConnectionString());
         using SqlCommand cmd = new() { Connection = cn, CommandText = statement };
